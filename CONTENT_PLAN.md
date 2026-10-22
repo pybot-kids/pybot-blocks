@@ -31,7 +31,7 @@ En el sitio no se nombra el curso ni la empresa; si hace falta, se dice "en un c
 - 9 zonas y una parada final, con 42 páginas en total (ver sección 5).
 - Español por defecto, inglés completo.
 - Cada página termina con **"Hazlo en Scratch"**.
-- Sin cuentas, sin analítica, sin micrófono ni cámara en PyBot Blocks.
+- Sin cuentas, sin anuncios, sin micrófono ni cámara en PyBot Blocks. Solo se cuentan visitas anónimas con Google Analytics, el mismo de PyBot (Python).
 
 ### Fuera de alcance (por ahora)
 
@@ -652,7 +652,7 @@ Al agregar una página de apoyo a la cabecera: una entrada en `headerPages` (má
 
 ## 10. Pruebas con niñas y niños
 
-**Observar, no medir.** No se recogen datos: ni grabaciones, ni nombres, ni formularios, ni analítica.
+**Observar, no medir.** No se recogen datos de las pruebas: ni grabaciones, ni nombres, ni formularios. La analítica del sitio solo cuenta visitas anónimas y no sirve para evaluar a nadie.
 
 ### Cómo
 

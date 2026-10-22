@@ -20,7 +20,7 @@ At María Ángel's new school, Scratch is a subject. She learned it in a course,
 
 - **Look → Try here → Create in Scratch.** Every lesson page ends with a "Make it in Scratch" step: exact steps in the real editor, a short challenge, what should happen, and what to check if it doesn't.
 - **Understanding is checked; creations are celebrated, never graded.**
-- **No accounts, no analytics, no ads, no camera or microphone.** Nothing the child types is stored except the name they choose, only in this browser.
+- **No accounts, no ads, no camera or microphone.** Nothing the child types is stored except the name they choose, only in this browser. The only data that leaves the browser is anonymous page-visit counts (see Analytics).
 - **A Scratch account is optional.** Practicing without one is always possible.
 - **Few, broad zones.** A new topic becomes a page inside its zone. A new zone is only created when no existing zone covers the topic.
 - **Mistakes are clues.** Hints are short and kind.
@@ -142,6 +142,18 @@ Loading validates everything: format, schema version, progress version, a 100 KB
 - Adding, renaming or removing a step or activity id: run `node tools/progress-version.mjs --bump "what changed"`.
 - Renaming or removing an id: also add an entry to `progressMigrations` (helpers: `renameProgressStep`, `renameProgressActivity`).
 - CI (`.github/workflows/progress-version.yml`) runs `node tools/progress-version.mjs`, `node tools/contrast.mjs` and `node tools/lesson-pages.mjs --check`.
+
+## Analytics
+
+PyBot Blocks uses the same Google Analytics 4 measurement ID as PyBot (Python), `G-H0PLZHW8CE`, to count anonymous page visits. It is set up in one place, `GA_MEASUREMENT_ID` and `startAnalytics()` in `script.js`; every page loads that script, and an empty ID turns analytics off.
+
+- Ad storage, ad user data, ad personalization and Google signals are turned off. GA4 does not log or store IP addresses.
+- Only standard page-view data is sent (page address, title, language, device type). The learner name, answers and progress in `localStorage` are never sent. Visits to this site can be told apart from PyBot's by the `/pybot-blocks/` path.
+- Analytics does not run when a page is opened from a local file.
+- The home page shows a short note for adults whenever analytics is on, and the FAQ answer “What data do you collect?” explains it.
+- Google Analytics sets its own `_ga` cookies. They are not part of the storage registry and are not included in backups.
+
+This is a product policy, not legal advice.
 
 ## Credits
 

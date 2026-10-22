@@ -108,6 +108,7 @@ const translations = {
 
     "local.eyebrow": "YOUR WORK IS YOURS",
     "local.title": "No account. Your progress stays here.",
+    "local.analytics": "For grown-ups: PyBot Blocks counts anonymous page visits with Google Analytics, with ads and ad personalization turned off. The learner's name, answers and progress are never sent.",
     "local.text": "This browser remembers your progress. What you create lives in Scratch, not here. Ask an adult before clearing the browser's data.",
     "backup.title": "Moving to another browser?",
     "backup.text": "Save a backup file here. Then load it in the other browser.",
@@ -479,6 +480,7 @@ const translations = {
 
     "local.eyebrow": "TU TRABAJO ES TUYO",
     "local.title": "Sin cuenta. Tu progreso se queda aquí.",
+    "local.analytics": "Para adultos: PyBot Blocks cuenta visitas anónimas a las páginas con Google Analytics, sin anuncios ni personalización de anuncios. El nombre, las respuestas y el avance de quien aprende nunca se envían.",
     "local.text": "Este navegador recuerda tu progreso. Lo que creas vive en Scratch, no aquí. Pregúntale a una persona adulta antes de borrar los datos del navegador.",
     "backup.title": "¿Vas a usar otro navegador?",
     "backup.text": "Guarda aquí una copia de seguridad. Después cárgala en el otro navegador.",
@@ -885,6 +887,39 @@ const PYBOT_MARKUP = `
       <span class="chest-code"><i></i><i></i></span>
     </div>
   </div>`;
+
+// Anonymous page-visit counts with Google Analytics 4, the same measurement ID
+// as PyBot (Python). Ads, ad personalization and Google signals are off; the
+// learner's name, answers and progress are never sent. An empty ID turns it off.
+const GA_MEASUREMENT_ID = "G-H0PLZHW8CE";
+
+function startAnalytics() {
+  if (!GA_MEASUREMENT_ID || !/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) return;
+  if (!/^https?:$/.test(window.location.protocol)) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "granted",
+  });
+  window.gtag("set", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  window.gtag("js", new Date());
+  window.gtag("config", GA_MEASUREMENT_ID, {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+  });
+  document.querySelectorAll("[data-analytics-note]").forEach((note) => {
+    note.hidden = false;
+  });
+  const tag = document.createElement("script");
+  tag.async = true;
+  tag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_MEASUREMENT_ID)}`;
+  document.head.append(tag);
+}
 
 const scriptBaseUrl = document.currentScript?.src || window.location.href;
 const languageButtons = document.querySelectorAll(".language-button");
@@ -2578,6 +2613,7 @@ languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
 
+startAnalytics();
 learnerName = storedLearnerName();
 updateLearnerNamePanel();
 startBuddy();
