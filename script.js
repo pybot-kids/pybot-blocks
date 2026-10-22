@@ -772,7 +772,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every change that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump "note"`), and add a migration below
 // when an id is renamed or removed.
-const PROGRESS_VERSION = 7;
+const PROGRESS_VERSION = 8;
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
 const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY, LEARNER_NAME_KEY];
@@ -809,9 +809,9 @@ const pathSteps = [
   { id: "varsAsk", activities: ["vars-ask-says", "vars-ask-order"] },
   { id: "varsRandom", activities: ["vars-random-dice", "vars-random-same"] },
   { id: "varsCompare", activities: ["vars-compare-true", "vars-compare-clue"] },
-  { id: "soundPlay", activities: [], soon: true },
-  { id: "soundMusic", activities: [], soon: true },
-  { id: "soundDance", activities: [], soon: true },
+  { id: "soundPlay", activities: ["sound-play-wait", "sound-play-match"] },
+  { id: "soundMusic", activities: ["sound-music-notes", "sound-music-tempo"] },
+  { id: "soundDance", activities: ["sound-dance-two", "sound-dance-slower"] },
   { id: "storyDialog", activities: [], soon: true },
   { id: "storyScenes", activities: [], soon: true },
   { id: "storyMessages", activities: [], soon: true },
