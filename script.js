@@ -851,7 +851,7 @@ const pathZones = [
 const THIS_SITE = "blocks";
 const pybotFamily = [
   { id: "python", name: "PyBot", url: "https://pybot-kids.github.io/", icon: "</>", ask: "family.pythonAsk", text: "family.pythonText" },
-  { id: "english", name: "PyBot English", url: "https://pybot-kids.github.io/pybot-english/", icon: "Aa", ask: "family.englishAsk", text: "family.englishText", soon: true },
+  { id: "english", name: "PyBot English", url: "https://pybot-kids.github.io/pybot-english/", icon: "Aa", ask: "family.englishAsk", text: "family.englishText" },
   { id: "blocks", name: "PyBot Blocks", url: "https://pybot-kids.github.io/pybot-blocks/", icon: "🧩", ask: "family.blocksAsk", text: "family.blocksText" },
 ];
 
