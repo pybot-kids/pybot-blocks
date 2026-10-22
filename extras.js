@@ -117,7 +117,7 @@ Object.assign(translations.en, {
   "start.editorStage": "Stage (top right): where your program happens.",
   "start.editorSprites": "Sprites (bottom right): the characters and objects.",
   "start.editorFlag": "Green flag and stop sign (above the stage): start and stop.",
-  "start.editorTabs": "Tabs (top left): Code, Costumes and Sounds.",
+  "start.editorTabs": "Tabs (top left): Code, Costumes (the drawings of your sprite) and Sounds.",
   "start.editorTry": "Try it: drag a “move 10 steps” block to the code area and click it. Did the sprite move?",
   "start.accountTitle": "Create an account, with a grown-up",
   "start.accountText": "Only if you want to save online and share. Do it together:",
@@ -136,9 +136,9 @@ Object.assign(translations.en, {
   "viewer.title": "See example programs",
   "viewer.intro": "Choose an example or write a program as text. The viewer draws the blocks so you can build them in Scratch.",
   "viewer.label": "Program as text",
-  "viewer.walk": "Walk",
-  "viewer.jump": "Jump",
-  "viewer.hello": "Say hello",
+  "viewer.walk": "Move and say hello",
+  "viewer.jump": "Move with a key",
+  "viewer.hello": "Turn when tapped",
   "viewer.loading": "Drawing the blocks…",
   "viewer.ready": "Ready. Change the text and the blocks change too.",
   "viewer.failed": "The blocks could not be drawn right now. You can still read the program as text.",
@@ -266,7 +266,7 @@ Object.assign(translations.es, {
   "start.editorStage": "Escenario (arriba a la derecha): donde pasa tu programa.",
   "start.editorSprites": "Objetos (abajo a la derecha): los personajes y las cosas.",
   "start.editorFlag": "Bandera verde y señal de alto (encima del escenario): empezar y detener.",
-  "start.editorTabs": "Pestañas (arriba a la izquierda): Código, Disfraces y Sonidos.",
+  "start.editorTabs": "Pestañas (arriba a la izquierda): Código, Disfraces (los dibujos de tu objeto) y Sonidos.",
   "start.editorTry": "Pruébalo: arrastra un bloque “mover 10 pasos” al área de programación y haz clic en él. ¿Se movió el objeto?",
   "start.accountTitle": "Crea una cuenta, con un adulto",
   "start.accountText": "Solo si quieres guardar en línea y compartir. Háganlo juntos:",
@@ -285,9 +285,9 @@ Object.assign(translations.es, {
   "viewer.title": "Mira programas de ejemplo",
   "viewer.intro": "Elige un ejemplo o escribe un programa como texto. El visor dibuja los bloques para que los armes en Scratch.",
   "viewer.label": "Programa como texto",
-  "viewer.walk": "Caminar",
-  "viewer.jump": "Saltar",
-  "viewer.hello": "Saludar",
+  "viewer.walk": "Avanzar y saludar",
+  "viewer.jump": "Moverse con una tecla",
+  "viewer.hello": "Girar al tocarlo",
   "viewer.loading": "Dibujando los bloques…",
   "viewer.ready": "Listo. Cambia el texto y los bloques cambian también.",
   "viewer.failed": "Ahora no se pudieron dibujar los bloques. Igual puedes leer el programa como texto.",
@@ -491,13 +491,14 @@ function renderStart() {
   renderViewerExamples();
 }
 
-// Block viewer. scratchblocks (MIT) is loaded only on this page, with a time
+// Block viewer. Examples use only ideas the Start page explains, and every block
+// has a visible effect. scratchblocks (MIT) is loaded only on this page, with a time
 // limit and a plain-text fallback: the drawing must never hang the page.
 const VIEWER_TIMEOUT_MS = 8000;
 const viewerExamples = {
-  walk: "when green flag clicked\nrepeat (10)\n  move (10) steps\n  next costume\n  wait (0.2) seconds\nend",
-  jump: "when [space v] key pressed\nchange y by (60)\nwait (0.3) seconds\nchange y by (-60)",
-  hello: "when this sprite clicked\nsay [Hello!] for (2) seconds\nthink [What now?] for (2) seconds",
+  walk: "when green flag clicked\nmove (150) steps\nsay [Hello!] for (2) seconds",
+  jump: "when [right arrow v] key pressed\nmove (10) steps",
+  hello: "when this sprite clicked\nturn right (90) degrees",
 };
 const viewerInput = document.querySelector("[data-viewer-input]");
 const viewerOutput = document.querySelector("[data-viewer-output]");
