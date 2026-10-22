@@ -1,0 +1,60 @@
+{
+  "versions": [
+    {
+      "version": 1,
+      "date": "2026-10-22",
+      "note": "Baseline: the zones and pages of the path (all coming soon), the first mission, and the Start in Scratch boxes.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [],
+        "helloEditor": [],
+        "helloSprites": [],
+        "helloSave": [],
+        "moveSteps": [],
+        "moveXY": [],
+        "moveGlide": [],
+        "looksSay": [],
+        "looksCostumes": [],
+        "looksBackdrops": [],
+        "eventsFlag": [],
+        "eventsKeys": [],
+        "eventsClick": [],
+        "eventsTogether": [],
+        "loopsRepeat": [],
+        "loopsForever": [],
+        "loopsAnimate": [],
+        "loopsPen": [],
+        "ifTouching": [],
+        "ifElse": [],
+        "ifKeys": [],
+        "ifColors": [],
+        "varsMake": [],
+        "varsScore": [],
+        "varsTimer": [],
+        "varsAsk": [],
+        "varsRandom": [],
+        "varsCompare": [],
+        "soundPlay": [],
+        "soundMusic": [],
+        "soundDance": [],
+        "storyDialog": [],
+        "storyScenes": [],
+        "storyMessages": [],
+        "storyPlan": [],
+        "gameCatch": [],
+        "gameMaze": [],
+        "gameQuiz": [],
+        "gamePong": [],
+        "gameClones": [],
+        "gameMine": [],
+        "finish": []
+      }
+    }
+  ]
+}
