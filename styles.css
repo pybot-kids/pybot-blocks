@@ -1285,7 +1285,7 @@ h3 {
   padding: 22px;
   border: 2px solid var(--line);
   border-radius: var(--radius-md);
-  background: var(--white);
+  background: var(--sky);
 }
 
 .chip {
@@ -1424,7 +1424,7 @@ h3 {
   padding: 16px 18px;
   border: 2px solid var(--line);
   border-radius: var(--radius-md);
-  background: var(--white);
+  background: var(--yellow-soft);
   box-shadow: var(--small-shadow);
 }
 
@@ -1539,16 +1539,20 @@ h3 {
   font-size: 1.6rem;
 }
 
-.step-green .step-icon {
+.step-green {
   background: var(--green-soft);
 }
 
-.step-blue .step-icon {
+.step-blue {
   background: var(--sky);
 }
 
-.step-yellow .step-icon {
+.step-yellow {
   background: var(--yellow-soft);
+}
+
+.step-icon {
+  background: var(--white);
 }
 
 /* Blocks drawn with HTML and CSS. A hat block has a rounded top. */
@@ -1624,7 +1628,7 @@ h3 {
   padding: 20px;
   border: 3px solid var(--ink);
   border-radius: var(--radius-lg);
-  background: var(--white);
+  background: var(--sky);
   box-shadow: var(--shadow);
 }
 
@@ -1639,7 +1643,7 @@ h3 {
   padding: 12px;
   border: 2px dashed var(--line);
   border-radius: 16px;
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.65);
 }
 
 .mission-area h3 {
@@ -1751,7 +1755,7 @@ h3 {
   padding: 20px;
   border: 2px solid var(--line);
   border-radius: var(--radius-md);
-  background: var(--white);
+  background: var(--green-soft);
 }
 
 .unplugged-card h3 {
@@ -1783,13 +1787,24 @@ h3 {
   padding: 20px;
   border: 3px solid var(--ink);
   border-radius: var(--radius-md);
-  background: var(--white);
+  background: var(--green-soft);
   color: var(--ink);
   text-decoration: none;
 }
 
+/* Soft tints take turns so neighboring boxes never look the same. */
+.extras-grid li:nth-child(3n + 2) .extras-card,
+.unplugged-card:nth-child(4n + 2) {
+  background: var(--sky);
+}
+
+.extras-grid li:nth-child(3n) .extras-card,
+.unplugged-card:nth-child(4n + 3) {
+  background: var(--yellow-soft);
+}
+
 .extras-card:hover {
-  background: var(--green-soft);
+  border-color: var(--green-dark);
 }
 
 .extras-card span:last-child {
@@ -1807,7 +1822,7 @@ h3 {
   padding: 32px;
   border: 3px solid var(--ink);
   border-radius: var(--radius-lg);
-  background: var(--white);
+  background: var(--green-soft);
 }
 
 .local-icon {
@@ -1833,7 +1848,7 @@ h3 {
   margin-top: 18px;
   padding: 16px;
   border-radius: 16px;
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .backup-tools p {
@@ -1896,7 +1911,7 @@ h3 {
   padding: 14px 16px;
   border: 2px solid var(--line);
   border-radius: 16px;
-  background: var(--white);
+  background: var(--sky);
   color: var(--ink);
   text-decoration: none;
 }
@@ -2009,7 +2024,7 @@ a.family-card:hover {
   padding: 22px;
   border: 3px solid var(--ink);
   border-radius: var(--radius-lg);
-  background: var(--white);
+  background: var(--green-soft);
 }
 
 .zone-badge {
@@ -2020,15 +2035,15 @@ a.family-card:hover {
   place-items: center;
   border: 3px solid var(--ink);
   border-radius: 20px;
-  background: var(--green-soft);
+  background: var(--white);
   font-size: 2rem;
 }
 
-.zone-card:nth-child(even) .zone-badge {
+.zone-card:nth-child(even) {
   background: var(--sky);
 }
 
-.zone-final .zone-badge {
+.zone-final {
   background: var(--yellow-soft);
 }
 
@@ -2066,7 +2081,7 @@ a.family-card:hover {
   padding: 8px 12px;
   border: 2px solid var(--line);
   border-radius: 14px;
-  background: var(--bg);
+  background: var(--white);
   font-weight: 700;
 }
 
@@ -2118,7 +2133,7 @@ a.family-card:hover {
   padding: 18px;
   border: 2px solid var(--line);
   border-radius: var(--radius-md);
-  background: var(--white);
+  background: var(--yellow-soft);
 }
 
 .album-streak-icon {
@@ -2152,7 +2167,7 @@ a.family-card:hover {
   padding: 18px 12px;
   border: 2px dashed var(--line);
   border-radius: var(--radius-md);
-  background: var(--white);
+  background: var(--sky);
   text-align: center;
 }
 
@@ -2164,7 +2179,7 @@ a.family-card:hover {
 
 .sticker.is-earned {
   border: 3px solid var(--ink);
-  background: var(--green-soft);
+  background: var(--yellow-soft);
 }
 
 .sticker.is-earned .sticker-icon {
@@ -2323,7 +2338,7 @@ a.family-card:hover {
   padding: 14px 18px;
   border: 2px solid var(--line);
   border-radius: 16px;
-  background: var(--white);
+  background: var(--green-soft);
 }
 
 .faq-item summary {
@@ -2340,7 +2355,7 @@ a.family-card:hover {
   padding: 16px 18px;
   border: 2px solid var(--line);
   border-radius: 16px;
-  background: var(--white);
+  background: var(--yellow-soft);
   font-size: 0.92rem;
 }
 
@@ -2368,11 +2383,16 @@ a.family-card:hover {
   padding: 20px;
   border: 3px solid var(--ink);
   border-radius: var(--radius-md);
-  background: var(--white);
+  background: var(--sky);
 }
 
 .start-step.is-done {
+  border-color: var(--green-dark);
   background: var(--green-soft);
+}
+
+#faq-adults .faq-item {
+  background: var(--sky);
 }
 
 .start-step-icon {
@@ -2383,7 +2403,7 @@ a.family-card:hover {
   place-items: center;
   border: 3px solid var(--ink);
   border-radius: 16px;
-  background: var(--sky);
+  background: var(--white);
   font-size: 1.6rem;
 }
 
@@ -2440,7 +2460,7 @@ a.family-card:hover {
   padding: 10px;
   border: 2px solid var(--line);
   border-radius: 12px;
-  background: var(--bg);
+  background: var(--white);
 }
 
 .viewer {
