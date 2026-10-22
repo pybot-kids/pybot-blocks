@@ -108,6 +108,7 @@ const translations = {
 
     "local.eyebrow": "YOUR WORK IS YOURS",
     "local.title": "No account. Your progress stays here.",
+    "local.analytics": "For grown-ups: PyBot Blocks counts anonymous page visits with Google Analytics, with ads and ad personalization turned off. The learner's name, answers and progress are never sent.",
     "local.text": "This browser remembers your progress. What you create lives in Scratch, not here. Ask an adult before clearing the browser's data.",
     "backup.title": "Moving to another browser?",
     "backup.text": "Save a backup file here. Then load it in the other browser.",
@@ -156,7 +157,8 @@ const translations = {
     "course.eyebrow": "THE PATH",
     "course.title": "Your way through Scratch",
     "course.intro": "A few big zones, each with its own route of pages. Go in order: each zone uses what the one before taught.",
-    "course.growth": "The pages are on their way. When they arrive, each one ends with a “Make it in Scratch” challenge.",
+    "course.growth": "🚧 Work in progress: all the lessons are here, and we keep testing and improving them with kids and families. If something in Scratch doesn't work the way a page says, please tell us. Each lesson ends with a “Make it in Scratch” challenge.",
+    "course.here": "You are here",
     "course.zone": "ZONE {count}",
     "course.final": "FINAL STOP",
     "course.adults": "For families",
@@ -443,7 +445,7 @@ const translations = {
     "mission.empty": "Toca un bloque para ponerlo aquí.",
     "mission.blockFlag": "al hacer clic en la bandera verde",
     "mission.blockMove": "mover {value} pasos",
-    "mission.blockSay": "decir {value} por 2 segundos",
+    "mission.blockSay": "decir {value} durante 2 segundos",
     "mission.hello": "¡Hola!",
     "mission.try": "▶ Probar",
     "mission.clear": "Empezar de nuevo",
@@ -478,6 +480,7 @@ const translations = {
 
     "local.eyebrow": "TU TRABAJO ES TUYO",
     "local.title": "Sin cuenta. Tu progreso se queda aquí.",
+    "local.analytics": "Para adultos: PyBot Blocks cuenta visitas anónimas a las páginas con Google Analytics, sin anuncios ni personalización de anuncios. El nombre, las respuestas y el avance de quien aprende nunca se envían.",
     "local.text": "Este navegador recuerda tu progreso. Lo que creas vive en Scratch, no aquí. Pregúntale a una persona adulta antes de borrar los datos del navegador.",
     "backup.title": "¿Vas a usar otro navegador?",
     "backup.text": "Guarda aquí una copia de seguridad. Después cárgala en el otro navegador.",
@@ -526,7 +529,8 @@ const translations = {
     "course.eyebrow": "EL CAMINO",
     "course.title": "Tu ruta por Scratch",
     "course.intro": "Pocas zonas grandes, cada una con su ruta de páginas. Ve en orden: cada zona usa lo que enseñó la anterior.",
-    "course.growth": "Las páginas vienen en camino. Cuando lleguen, cada una terminará con un reto “Hazlo en Scratch”.",
+    "course.growth": "🚧 Proyecto en construcción: ya están todas las lecciones, y las seguimos probando y mejorando con niñas, niños y familias. Si algo en Scratch no funciona como dice una página, cuéntanos. Cada lección termina con un reto “Hazlo en Scratch”.",
+    "course.here": "Estás aquí",
     "course.zone": "ZONA {count}",
     "course.final": "PARADA FINAL",
     "course.adults": "Para familias",
@@ -770,7 +774,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every change that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump "note"`), and add a migration below
 // when an id is renamed or removed.
-const PROGRESS_VERSION = 1;
+const PROGRESS_VERSION = 11;
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
 const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY, LEARNER_NAME_KEY];
@@ -779,48 +783,48 @@ const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY,
 // zone is only added when no zone covers the topic. `soon` pages show "Coming
 // soon" and have no lesson file yet. Lesson files will live in lessons/<id>.html.
 const pathSteps = [
-  { id: "helloWhat", activities: [], soon: true },
-  { id: "helloEditor", activities: [], soon: true },
-  { id: "helloSprites", activities: [], soon: true },
-  { id: "helloSave", activities: [], soon: true },
-  { id: "moveSteps", activities: [], soon: true },
-  { id: "moveXY", activities: [], soon: true },
-  { id: "moveGlide", activities: [], soon: true },
-  { id: "looksSay", activities: [], soon: true },
-  { id: "looksCostumes", activities: [], soon: true },
-  { id: "looksBackdrops", activities: [], soon: true },
-  { id: "eventsFlag", activities: [], soon: true },
-  { id: "eventsKeys", activities: [], soon: true },
-  { id: "eventsClick", activities: [], soon: true },
-  { id: "eventsTogether", activities: [], soon: true },
-  { id: "loopsRepeat", activities: [], soon: true },
-  { id: "loopsForever", activities: [], soon: true },
-  { id: "loopsAnimate", activities: [], soon: true },
-  { id: "loopsPen", activities: [], soon: true },
-  { id: "ifTouching", activities: [], soon: true },
-  { id: "ifElse", activities: [], soon: true },
-  { id: "ifKeys", activities: [], soon: true },
-  { id: "ifColors", activities: [], soon: true },
-  { id: "varsMake", activities: [], soon: true },
-  { id: "varsScore", activities: [], soon: true },
-  { id: "varsTimer", activities: [], soon: true },
-  { id: "varsAsk", activities: [], soon: true },
-  { id: "varsRandom", activities: [], soon: true },
-  { id: "varsCompare", activities: [], soon: true },
-  { id: "soundPlay", activities: [], soon: true },
-  { id: "soundMusic", activities: [], soon: true },
-  { id: "soundDance", activities: [], soon: true },
-  { id: "storyDialog", activities: [], soon: true },
-  { id: "storyScenes", activities: [], soon: true },
-  { id: "storyMessages", activities: [], soon: true },
-  { id: "storyPlan", activities: [], soon: true },
-  { id: "gameCatch", activities: [], soon: true },
-  { id: "gameMaze", activities: [], soon: true },
-  { id: "gameQuiz", activities: [], soon: true },
-  { id: "gamePong", activities: [], soon: true },
-  { id: "gameClones", activities: [], soon: true },
-  { id: "gameMine", activities: [], soon: true },
-  { id: "finish", activities: [], soon: true },
+  { id: "helloWhat", activities: ["hello-what-build", "hello-what-words"] },
+  { id: "helloEditor", activities: ["hello-editor-where", "hello-editor-category", "hello-editor-buttons"] },
+  { id: "helloSprites", activities: ["hello-sprites-whose", "hello-sprites-words"] },
+  { id: "helloSave", activities: ["hello-save-steps", "hello-save-share"] },
+  { id: "moveSteps", activities: ["move-steps-facing", "move-steps-order"] },
+  { id: "moveXY", activities: ["move-xy-where", "move-xy-map"] },
+  { id: "moveGlide", activities: ["move-glide-which", "move-glide-speed"] },
+  { id: "looksSay", activities: ["looks-say-bubbles", "looks-say-order"] },
+  { id: "looksCostumes", activities: ["looks-costumes-walk", "looks-costumes-wait"] },
+  { id: "looksBackdrops", activities: ["looks-backdrops-size", "looks-backdrops-match"] },
+  { id: "eventsFlag", activities: ["events-flag-order", "events-flag-missing"] },
+  { id: "eventsKeys", activities: ["events-keys-match", "events-keys-which"] },
+  { id: "eventsClick", activities: ["events-click-when", "events-click-whose"] },
+  { id: "eventsTogether", activities: ["events-together-what", "events-together-wait"] },
+  { id: "loopsRepeat", activities: ["loops-repeat-count", "loops-repeat-inside"] },
+  { id: "loopsForever", activities: ["loops-forever-end", "loops-forever-which"] },
+  { id: "loopsAnimate", activities: ["loops-animate-slow", "loops-animate-heart"] },
+  { id: "loopsPen", activities: ["loops-pen-triangle", "loops-pen-shapes"] },
+  { id: "ifTouching", activities: ["if-touching-when", "if-touching-forever"] },
+  { id: "ifElse", activities: ["if-else-false", "if-else-where"] },
+  { id: "ifKeys", activities: ["if-keys-hold", "if-keys-faster"] },
+  { id: "ifColors", activities: ["if-colors-wall", "if-colors-exact"] },
+  { id: "varsMake", activities: ["vars-make-value", "vars-make-match"] },
+  { id: "varsScore", activities: ["vars-score-move", "vars-score-reset"] },
+  { id: "varsTimer", activities: ["vars-timer-length", "vars-timer-order"] },
+  { id: "varsAsk", activities: ["vars-ask-says", "vars-ask-order"] },
+  { id: "varsRandom", activities: ["vars-random-dice", "vars-random-same"] },
+  { id: "varsCompare", activities: ["vars-compare-true", "vars-compare-clue"] },
+  { id: "soundPlay", activities: ["sound-play-wait", "sound-play-match"] },
+  { id: "soundMusic", activities: ["sound-music-notes", "sound-music-tempo"] },
+  { id: "soundDance", activities: ["sound-dance-two", "sound-dance-slower"] },
+  { id: "storyDialog", activities: ["story-dialog-wait", "story-dialog-same"] },
+  { id: "storyScenes", activities: ["story-scenes-when", "story-scenes-start"] },
+  { id: "storyMessages", activities: ["story-messages-pair", "story-messages-name"] },
+  { id: "storyPlan", activities: ["story-plan-order", "story-plan-tool"] },
+  { id: "gameCatch", activities: ["game-catch-back", "game-catch-faster"] },
+  { id: "gameMaze", activities: ["game-maze-wall", "game-maze-small"] },
+  { id: "gameQuiz", activities: ["game-quiz-score", "game-quiz-equal"] },
+  { id: "gamePong", activities: ["game-pong-paddle", "game-pong-bounce"] },
+  { id: "gameClones", activities: ["game-clones-count", "game-clones-delete"] },
+  { id: "gameMine", activities: ["game-mine-tools", "game-mine-steps"] },
+  { id: "finish", activities: ["finish-blocks", "finish-program", "finish-debug"] },
 ];
 // Activities outside the path: the first mission on the home page and the
 // "I did it" boxes on the Start in Scratch page.
@@ -883,6 +887,39 @@ const PYBOT_MARKUP = `
       <span class="chest-code"><i></i><i></i></span>
     </div>
   </div>`;
+
+// Anonymous page-visit counts with Google Analytics 4, the same measurement ID
+// as PyBot (Python). Ads, ad personalization and Google signals are off; the
+// learner's name, answers and progress are never sent. An empty ID turns it off.
+const GA_MEASUREMENT_ID = "G-H0PLZHW8CE";
+
+function startAnalytics() {
+  if (!GA_MEASUREMENT_ID || !/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) return;
+  if (!/^https?:$/.test(window.location.protocol)) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "granted",
+  });
+  window.gtag("set", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  window.gtag("js", new Date());
+  window.gtag("config", GA_MEASUREMENT_ID, {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+  });
+  document.querySelectorAll("[data-analytics-note]").forEach((note) => {
+    note.hidden = false;
+  });
+  const tag = document.createElement("script");
+  tag.async = true;
+  tag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_MEASUREMENT_ID)}`;
+  document.head.append(tag);
+}
 
 const scriptBaseUrl = document.currentScript?.src || window.location.href;
 const languageButtons = document.querySelectorAll(".language-button");
@@ -949,7 +986,6 @@ function zoneProgress() {
   return { done: new Set(pathZones.filter((zone) => zone.steps.every((id) => done.has(id)))) };
 }
 
-const stepActivities = document.querySelectorAll(".step-activity");
 
 // Stickers and learning days, from PyBot.
 const zoneBadgeId = (zone) => `zone-${zone.steps[0]}`;
@@ -1666,6 +1702,7 @@ function buddyReact(event) {
   buddyWake(false);
 
   if (event === "correct") {
+    const stepActivities = document.querySelectorAll(".step-activity");
     const pageDone = stepActivities.length > 0 && [...stepActivities].every((item) => item.classList.contains("is-complete"));
     if (pageDone) {
       buddyAct("celebrating", "dance", learnerName ? textWithName("buddy.pageDoneNamed") : textFor("buddy.pageDone"), 4200);
@@ -2311,6 +2348,12 @@ function renderCourse() {
   }
   const done = new Set(doneSteps().map((step) => step.id));
   const doneZones = zoneProgress().done;
+  let current = "";
+  try {
+    current = localStorage.getItem(PATH_CURRENT_KEY) ?? "";
+  } catch {
+    // Without storage no page is marked.
+  }
   let number = 0;
   list.replaceChildren(...pathZones.map((zone) => {
     const card = document.createElement("li");
@@ -2336,7 +2379,21 @@ function renderCourse() {
       stop.className = `route-stop${done.has(id) ? " is-done" : ""}`;
       stop.innerHTML = '<span class="route-dot" aria-hidden="true"></span><span></span>';
       stop.querySelector(".route-dot").textContent = done.has(id) ? "✓" : String(index + 1);
-      stop.querySelector("span:last-child").textContent = textFor(`step.${id}`);
+      const name = stop.querySelector("span:last-child");
+      name.textContent = textFor(`step.${id}`);
+      if (!step.soon) {
+        const link = document.createElement("a");
+        link.href = `lessons/${id}.html`;
+        link.textContent = name.textContent;
+        name.replaceChildren(link);
+      }
+      if (id === current) {
+        stop.classList.add("is-current");
+        const here = document.createElement("span");
+        here.className = "chip";
+        here.textContent = textFor("course.here");
+        stop.append(here);
+      }
       if (step.soon) {
         const chip = document.createElement("span");
         chip.className = "chip chip-soon";
@@ -2556,6 +2613,7 @@ languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
 
+startAnalytics();
 learnerName = storedLearnerName();
 updateLearnerNamePanel();
 startBuddy();

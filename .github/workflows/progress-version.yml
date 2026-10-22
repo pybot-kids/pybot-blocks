@@ -18,3 +18,4 @@ jobs:
           node-version: 22
       - run: node tools/progress-version.mjs
       - run: node tools/contrast.mjs
+      - run: node tools/lesson-pages.mjs --check

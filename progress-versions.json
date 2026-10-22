@@ -55,6 +55,1312 @@
         "gameMine": [],
         "finish": []
       }
+    },
+    {
+      "version": 2,
+      "date": "2026-10-22",
+      "note": "Zone 00 Hola, Scratch: four lessons published with their activities.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [],
+        "moveXY": [],
+        "moveGlide": [],
+        "looksSay": [],
+        "looksCostumes": [],
+        "looksBackdrops": [],
+        "eventsFlag": [],
+        "eventsKeys": [],
+        "eventsClick": [],
+        "eventsTogether": [],
+        "loopsRepeat": [],
+        "loopsForever": [],
+        "loopsAnimate": [],
+        "loopsPen": [],
+        "ifTouching": [],
+        "ifElse": [],
+        "ifKeys": [],
+        "ifColors": [],
+        "varsMake": [],
+        "varsScore": [],
+        "varsTimer": [],
+        "varsAsk": [],
+        "varsRandom": [],
+        "varsCompare": [],
+        "soundPlay": [],
+        "soundMusic": [],
+        "soundDance": [],
+        "storyDialog": [],
+        "storyScenes": [],
+        "storyMessages": [],
+        "storyPlan": [],
+        "gameCatch": [],
+        "gameMaze": [],
+        "gameQuiz": [],
+        "gamePong": [],
+        "gameClones": [],
+        "gameMine": [],
+        "finish": []
+      }
+    },
+    {
+      "version": 3,
+      "date": "2026-10-22",
+      "note": "Zone 01 Mover y mirar: six lessons published with their activities.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [
+          "move-steps-facing",
+          "move-steps-order"
+        ],
+        "moveXY": [
+          "move-xy-where",
+          "move-xy-map"
+        ],
+        "moveGlide": [
+          "move-glide-which",
+          "move-glide-speed"
+        ],
+        "looksSay": [
+          "looks-say-bubbles",
+          "looks-say-order"
+        ],
+        "looksCostumes": [
+          "looks-costumes-walk",
+          "looks-costumes-wait"
+        ],
+        "looksBackdrops": [
+          "looks-backdrops-size",
+          "looks-backdrops-match"
+        ],
+        "eventsFlag": [],
+        "eventsKeys": [],
+        "eventsClick": [],
+        "eventsTogether": [],
+        "loopsRepeat": [],
+        "loopsForever": [],
+        "loopsAnimate": [],
+        "loopsPen": [],
+        "ifTouching": [],
+        "ifElse": [],
+        "ifKeys": [],
+        "ifColors": [],
+        "varsMake": [],
+        "varsScore": [],
+        "varsTimer": [],
+        "varsAsk": [],
+        "varsRandom": [],
+        "varsCompare": [],
+        "soundPlay": [],
+        "soundMusic": [],
+        "soundDance": [],
+        "storyDialog": [],
+        "storyScenes": [],
+        "storyMessages": [],
+        "storyPlan": [],
+        "gameCatch": [],
+        "gameMaze": [],
+        "gameQuiz": [],
+        "gamePong": [],
+        "gameClones": [],
+        "gameMine": [],
+        "finish": []
+      }
+    },
+    {
+      "version": 4,
+      "date": "2026-10-22",
+      "note": "Zone 02 Cuando pase algo: four lessons published with their activities.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [
+          "move-steps-facing",
+          "move-steps-order"
+        ],
+        "moveXY": [
+          "move-xy-where",
+          "move-xy-map"
+        ],
+        "moveGlide": [
+          "move-glide-which",
+          "move-glide-speed"
+        ],
+        "looksSay": [
+          "looks-say-bubbles",
+          "looks-say-order"
+        ],
+        "looksCostumes": [
+          "looks-costumes-walk",
+          "looks-costumes-wait"
+        ],
+        "looksBackdrops": [
+          "looks-backdrops-size",
+          "looks-backdrops-match"
+        ],
+        "eventsFlag": [
+          "events-flag-order",
+          "events-flag-missing"
+        ],
+        "eventsKeys": [
+          "events-keys-match",
+          "events-keys-which"
+        ],
+        "eventsClick": [
+          "events-click-when",
+          "events-click-whose"
+        ],
+        "eventsTogether": [
+          "events-together-what",
+          "events-together-wait"
+        ],
+        "loopsRepeat": [],
+        "loopsForever": [],
+        "loopsAnimate": [],
+        "loopsPen": [],
+        "ifTouching": [],
+        "ifElse": [],
+        "ifKeys": [],
+        "ifColors": [],
+        "varsMake": [],
+        "varsScore": [],
+        "varsTimer": [],
+        "varsAsk": [],
+        "varsRandom": [],
+        "varsCompare": [],
+        "soundPlay": [],
+        "soundMusic": [],
+        "soundDance": [],
+        "storyDialog": [],
+        "storyScenes": [],
+        "storyMessages": [],
+        "storyPlan": [],
+        "gameCatch": [],
+        "gameMaze": [],
+        "gameQuiz": [],
+        "gamePong": [],
+        "gameClones": [],
+        "gameMine": [],
+        "finish": []
+      }
+    },
+    {
+      "version": 5,
+      "date": "2026-10-22",
+      "note": "Zone 03 Repetir: four lessons published with their activities.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [
+          "move-steps-facing",
+          "move-steps-order"
+        ],
+        "moveXY": [
+          "move-xy-where",
+          "move-xy-map"
+        ],
+        "moveGlide": [
+          "move-glide-which",
+          "move-glide-speed"
+        ],
+        "looksSay": [
+          "looks-say-bubbles",
+          "looks-say-order"
+        ],
+        "looksCostumes": [
+          "looks-costumes-walk",
+          "looks-costumes-wait"
+        ],
+        "looksBackdrops": [
+          "looks-backdrops-size",
+          "looks-backdrops-match"
+        ],
+        "eventsFlag": [
+          "events-flag-order",
+          "events-flag-missing"
+        ],
+        "eventsKeys": [
+          "events-keys-match",
+          "events-keys-which"
+        ],
+        "eventsClick": [
+          "events-click-when",
+          "events-click-whose"
+        ],
+        "eventsTogether": [
+          "events-together-what",
+          "events-together-wait"
+        ],
+        "loopsRepeat": [
+          "loops-repeat-count",
+          "loops-repeat-inside"
+        ],
+        "loopsForever": [
+          "loops-forever-end",
+          "loops-forever-which"
+        ],
+        "loopsAnimate": [
+          "loops-animate-slow",
+          "loops-animate-heart"
+        ],
+        "loopsPen": [
+          "loops-pen-triangle",
+          "loops-pen-shapes"
+        ],
+        "ifTouching": [],
+        "ifElse": [],
+        "ifKeys": [],
+        "ifColors": [],
+        "varsMake": [],
+        "varsScore": [],
+        "varsTimer": [],
+        "varsAsk": [],
+        "varsRandom": [],
+        "varsCompare": [],
+        "soundPlay": [],
+        "soundMusic": [],
+        "soundDance": [],
+        "storyDialog": [],
+        "storyScenes": [],
+        "storyMessages": [],
+        "storyPlan": [],
+        "gameCatch": [],
+        "gameMaze": [],
+        "gameQuiz": [],
+        "gamePong": [],
+        "gameClones": [],
+        "gameMine": [],
+        "finish": []
+      }
+    },
+    {
+      "version": 6,
+      "date": "2026-10-22",
+      "note": "Zone 04 Decidir: four lessons published with their activities.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [
+          "move-steps-facing",
+          "move-steps-order"
+        ],
+        "moveXY": [
+          "move-xy-where",
+          "move-xy-map"
+        ],
+        "moveGlide": [
+          "move-glide-which",
+          "move-glide-speed"
+        ],
+        "looksSay": [
+          "looks-say-bubbles",
+          "looks-say-order"
+        ],
+        "looksCostumes": [
+          "looks-costumes-walk",
+          "looks-costumes-wait"
+        ],
+        "looksBackdrops": [
+          "looks-backdrops-size",
+          "looks-backdrops-match"
+        ],
+        "eventsFlag": [
+          "events-flag-order",
+          "events-flag-missing"
+        ],
+        "eventsKeys": [
+          "events-keys-match",
+          "events-keys-which"
+        ],
+        "eventsClick": [
+          "events-click-when",
+          "events-click-whose"
+        ],
+        "eventsTogether": [
+          "events-together-what",
+          "events-together-wait"
+        ],
+        "loopsRepeat": [
+          "loops-repeat-count",
+          "loops-repeat-inside"
+        ],
+        "loopsForever": [
+          "loops-forever-end",
+          "loops-forever-which"
+        ],
+        "loopsAnimate": [
+          "loops-animate-slow",
+          "loops-animate-heart"
+        ],
+        "loopsPen": [
+          "loops-pen-triangle",
+          "loops-pen-shapes"
+        ],
+        "ifTouching": [
+          "if-touching-when",
+          "if-touching-forever"
+        ],
+        "ifElse": [
+          "if-else-false",
+          "if-else-where"
+        ],
+        "ifKeys": [
+          "if-keys-hold",
+          "if-keys-faster"
+        ],
+        "ifColors": [
+          "if-colors-wall",
+          "if-colors-exact"
+        ],
+        "varsMake": [],
+        "varsScore": [],
+        "varsTimer": [],
+        "varsAsk": [],
+        "varsRandom": [],
+        "varsCompare": [],
+        "soundPlay": [],
+        "soundMusic": [],
+        "soundDance": [],
+        "storyDialog": [],
+        "storyScenes": [],
+        "storyMessages": [],
+        "storyPlan": [],
+        "gameCatch": [],
+        "gameMaze": [],
+        "gameQuiz": [],
+        "gamePong": [],
+        "gameClones": [],
+        "gameMine": [],
+        "finish": []
+      }
+    },
+    {
+      "version": 7,
+      "date": "2026-10-22",
+      "note": "Zone 05 Recordar: six lessons published with their activities.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [
+          "move-steps-facing",
+          "move-steps-order"
+        ],
+        "moveXY": [
+          "move-xy-where",
+          "move-xy-map"
+        ],
+        "moveGlide": [
+          "move-glide-which",
+          "move-glide-speed"
+        ],
+        "looksSay": [
+          "looks-say-bubbles",
+          "looks-say-order"
+        ],
+        "looksCostumes": [
+          "looks-costumes-walk",
+          "looks-costumes-wait"
+        ],
+        "looksBackdrops": [
+          "looks-backdrops-size",
+          "looks-backdrops-match"
+        ],
+        "eventsFlag": [
+          "events-flag-order",
+          "events-flag-missing"
+        ],
+        "eventsKeys": [
+          "events-keys-match",
+          "events-keys-which"
+        ],
+        "eventsClick": [
+          "events-click-when",
+          "events-click-whose"
+        ],
+        "eventsTogether": [
+          "events-together-what",
+          "events-together-wait"
+        ],
+        "loopsRepeat": [
+          "loops-repeat-count",
+          "loops-repeat-inside"
+        ],
+        "loopsForever": [
+          "loops-forever-end",
+          "loops-forever-which"
+        ],
+        "loopsAnimate": [
+          "loops-animate-slow",
+          "loops-animate-heart"
+        ],
+        "loopsPen": [
+          "loops-pen-triangle",
+          "loops-pen-shapes"
+        ],
+        "ifTouching": [
+          "if-touching-when",
+          "if-touching-forever"
+        ],
+        "ifElse": [
+          "if-else-false",
+          "if-else-where"
+        ],
+        "ifKeys": [
+          "if-keys-hold",
+          "if-keys-faster"
+        ],
+        "ifColors": [
+          "if-colors-wall",
+          "if-colors-exact"
+        ],
+        "varsMake": [
+          "vars-make-value",
+          "vars-make-match"
+        ],
+        "varsScore": [
+          "vars-score-move",
+          "vars-score-reset"
+        ],
+        "varsTimer": [
+          "vars-timer-length",
+          "vars-timer-order"
+        ],
+        "varsAsk": [
+          "vars-ask-says",
+          "vars-ask-order"
+        ],
+        "varsRandom": [
+          "vars-random-dice",
+          "vars-random-same"
+        ],
+        "varsCompare": [
+          "vars-compare-true",
+          "vars-compare-clue"
+        ],
+        "soundPlay": [],
+        "soundMusic": [],
+        "soundDance": [],
+        "storyDialog": [],
+        "storyScenes": [],
+        "storyMessages": [],
+        "storyPlan": [],
+        "gameCatch": [],
+        "gameMaze": [],
+        "gameQuiz": [],
+        "gamePong": [],
+        "gameClones": [],
+        "gameMine": [],
+        "finish": []
+      }
+    },
+    {
+      "version": 8,
+      "date": "2026-10-22",
+      "note": "Zone 06 Sonido y música: three lessons published with their activities.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [
+          "move-steps-facing",
+          "move-steps-order"
+        ],
+        "moveXY": [
+          "move-xy-where",
+          "move-xy-map"
+        ],
+        "moveGlide": [
+          "move-glide-which",
+          "move-glide-speed"
+        ],
+        "looksSay": [
+          "looks-say-bubbles",
+          "looks-say-order"
+        ],
+        "looksCostumes": [
+          "looks-costumes-walk",
+          "looks-costumes-wait"
+        ],
+        "looksBackdrops": [
+          "looks-backdrops-size",
+          "looks-backdrops-match"
+        ],
+        "eventsFlag": [
+          "events-flag-order",
+          "events-flag-missing"
+        ],
+        "eventsKeys": [
+          "events-keys-match",
+          "events-keys-which"
+        ],
+        "eventsClick": [
+          "events-click-when",
+          "events-click-whose"
+        ],
+        "eventsTogether": [
+          "events-together-what",
+          "events-together-wait"
+        ],
+        "loopsRepeat": [
+          "loops-repeat-count",
+          "loops-repeat-inside"
+        ],
+        "loopsForever": [
+          "loops-forever-end",
+          "loops-forever-which"
+        ],
+        "loopsAnimate": [
+          "loops-animate-slow",
+          "loops-animate-heart"
+        ],
+        "loopsPen": [
+          "loops-pen-triangle",
+          "loops-pen-shapes"
+        ],
+        "ifTouching": [
+          "if-touching-when",
+          "if-touching-forever"
+        ],
+        "ifElse": [
+          "if-else-false",
+          "if-else-where"
+        ],
+        "ifKeys": [
+          "if-keys-hold",
+          "if-keys-faster"
+        ],
+        "ifColors": [
+          "if-colors-wall",
+          "if-colors-exact"
+        ],
+        "varsMake": [
+          "vars-make-value",
+          "vars-make-match"
+        ],
+        "varsScore": [
+          "vars-score-move",
+          "vars-score-reset"
+        ],
+        "varsTimer": [
+          "vars-timer-length",
+          "vars-timer-order"
+        ],
+        "varsAsk": [
+          "vars-ask-says",
+          "vars-ask-order"
+        ],
+        "varsRandom": [
+          "vars-random-dice",
+          "vars-random-same"
+        ],
+        "varsCompare": [
+          "vars-compare-true",
+          "vars-compare-clue"
+        ],
+        "soundPlay": [
+          "sound-play-wait",
+          "sound-play-match"
+        ],
+        "soundMusic": [
+          "sound-music-notes",
+          "sound-music-tempo"
+        ],
+        "soundDance": [
+          "sound-dance-two",
+          "sound-dance-slower"
+        ],
+        "storyDialog": [],
+        "storyScenes": [],
+        "storyMessages": [],
+        "storyPlan": [],
+        "gameCatch": [],
+        "gameMaze": [],
+        "gameQuiz": [],
+        "gamePong": [],
+        "gameClones": [],
+        "gameMine": [],
+        "finish": []
+      }
+    },
+    {
+      "version": 9,
+      "date": "2026-10-22",
+      "note": "Zone 07 Contar historias: four lessons published with their activities.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [
+          "move-steps-facing",
+          "move-steps-order"
+        ],
+        "moveXY": [
+          "move-xy-where",
+          "move-xy-map"
+        ],
+        "moveGlide": [
+          "move-glide-which",
+          "move-glide-speed"
+        ],
+        "looksSay": [
+          "looks-say-bubbles",
+          "looks-say-order"
+        ],
+        "looksCostumes": [
+          "looks-costumes-walk",
+          "looks-costumes-wait"
+        ],
+        "looksBackdrops": [
+          "looks-backdrops-size",
+          "looks-backdrops-match"
+        ],
+        "eventsFlag": [
+          "events-flag-order",
+          "events-flag-missing"
+        ],
+        "eventsKeys": [
+          "events-keys-match",
+          "events-keys-which"
+        ],
+        "eventsClick": [
+          "events-click-when",
+          "events-click-whose"
+        ],
+        "eventsTogether": [
+          "events-together-what",
+          "events-together-wait"
+        ],
+        "loopsRepeat": [
+          "loops-repeat-count",
+          "loops-repeat-inside"
+        ],
+        "loopsForever": [
+          "loops-forever-end",
+          "loops-forever-which"
+        ],
+        "loopsAnimate": [
+          "loops-animate-slow",
+          "loops-animate-heart"
+        ],
+        "loopsPen": [
+          "loops-pen-triangle",
+          "loops-pen-shapes"
+        ],
+        "ifTouching": [
+          "if-touching-when",
+          "if-touching-forever"
+        ],
+        "ifElse": [
+          "if-else-false",
+          "if-else-where"
+        ],
+        "ifKeys": [
+          "if-keys-hold",
+          "if-keys-faster"
+        ],
+        "ifColors": [
+          "if-colors-wall",
+          "if-colors-exact"
+        ],
+        "varsMake": [
+          "vars-make-value",
+          "vars-make-match"
+        ],
+        "varsScore": [
+          "vars-score-move",
+          "vars-score-reset"
+        ],
+        "varsTimer": [
+          "vars-timer-length",
+          "vars-timer-order"
+        ],
+        "varsAsk": [
+          "vars-ask-says",
+          "vars-ask-order"
+        ],
+        "varsRandom": [
+          "vars-random-dice",
+          "vars-random-same"
+        ],
+        "varsCompare": [
+          "vars-compare-true",
+          "vars-compare-clue"
+        ],
+        "soundPlay": [
+          "sound-play-wait",
+          "sound-play-match"
+        ],
+        "soundMusic": [
+          "sound-music-notes",
+          "sound-music-tempo"
+        ],
+        "soundDance": [
+          "sound-dance-two",
+          "sound-dance-slower"
+        ],
+        "storyDialog": [
+          "story-dialog-wait",
+          "story-dialog-same"
+        ],
+        "storyScenes": [
+          "story-scenes-when",
+          "story-scenes-start"
+        ],
+        "storyMessages": [
+          "story-messages-pair",
+          "story-messages-name"
+        ],
+        "storyPlan": [
+          "story-plan-order",
+          "story-plan-tool"
+        ],
+        "gameCatch": [],
+        "gameMaze": [],
+        "gameQuiz": [],
+        "gamePong": [],
+        "gameClones": [],
+        "gameMine": [],
+        "finish": []
+      }
+    },
+    {
+      "version": 10,
+      "date": "2026-10-22",
+      "note": "Zone 08 Mis juegos: six guided projects published with their activities.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [
+          "move-steps-facing",
+          "move-steps-order"
+        ],
+        "moveXY": [
+          "move-xy-where",
+          "move-xy-map"
+        ],
+        "moveGlide": [
+          "move-glide-which",
+          "move-glide-speed"
+        ],
+        "looksSay": [
+          "looks-say-bubbles",
+          "looks-say-order"
+        ],
+        "looksCostumes": [
+          "looks-costumes-walk",
+          "looks-costumes-wait"
+        ],
+        "looksBackdrops": [
+          "looks-backdrops-size",
+          "looks-backdrops-match"
+        ],
+        "eventsFlag": [
+          "events-flag-order",
+          "events-flag-missing"
+        ],
+        "eventsKeys": [
+          "events-keys-match",
+          "events-keys-which"
+        ],
+        "eventsClick": [
+          "events-click-when",
+          "events-click-whose"
+        ],
+        "eventsTogether": [
+          "events-together-what",
+          "events-together-wait"
+        ],
+        "loopsRepeat": [
+          "loops-repeat-count",
+          "loops-repeat-inside"
+        ],
+        "loopsForever": [
+          "loops-forever-end",
+          "loops-forever-which"
+        ],
+        "loopsAnimate": [
+          "loops-animate-slow",
+          "loops-animate-heart"
+        ],
+        "loopsPen": [
+          "loops-pen-triangle",
+          "loops-pen-shapes"
+        ],
+        "ifTouching": [
+          "if-touching-when",
+          "if-touching-forever"
+        ],
+        "ifElse": [
+          "if-else-false",
+          "if-else-where"
+        ],
+        "ifKeys": [
+          "if-keys-hold",
+          "if-keys-faster"
+        ],
+        "ifColors": [
+          "if-colors-wall",
+          "if-colors-exact"
+        ],
+        "varsMake": [
+          "vars-make-value",
+          "vars-make-match"
+        ],
+        "varsScore": [
+          "vars-score-move",
+          "vars-score-reset"
+        ],
+        "varsTimer": [
+          "vars-timer-length",
+          "vars-timer-order"
+        ],
+        "varsAsk": [
+          "vars-ask-says",
+          "vars-ask-order"
+        ],
+        "varsRandom": [
+          "vars-random-dice",
+          "vars-random-same"
+        ],
+        "varsCompare": [
+          "vars-compare-true",
+          "vars-compare-clue"
+        ],
+        "soundPlay": [
+          "sound-play-wait",
+          "sound-play-match"
+        ],
+        "soundMusic": [
+          "sound-music-notes",
+          "sound-music-tempo"
+        ],
+        "soundDance": [
+          "sound-dance-two",
+          "sound-dance-slower"
+        ],
+        "storyDialog": [
+          "story-dialog-wait",
+          "story-dialog-same"
+        ],
+        "storyScenes": [
+          "story-scenes-when",
+          "story-scenes-start"
+        ],
+        "storyMessages": [
+          "story-messages-pair",
+          "story-messages-name"
+        ],
+        "storyPlan": [
+          "story-plan-order",
+          "story-plan-tool"
+        ],
+        "gameCatch": [
+          "game-catch-back",
+          "game-catch-faster"
+        ],
+        "gameMaze": [
+          "game-maze-wall",
+          "game-maze-small"
+        ],
+        "gameQuiz": [
+          "game-quiz-score",
+          "game-quiz-equal"
+        ],
+        "gamePong": [
+          "game-pong-paddle",
+          "game-pong-bounce"
+        ],
+        "gameClones": [
+          "game-clones-count",
+          "game-clones-delete"
+        ],
+        "gameMine": [
+          "game-mine-tools",
+          "game-mine-steps"
+        ],
+        "finish": []
+      }
+    },
+    {
+      "version": 11,
+      "date": "2026-10-22",
+      "note": "Final stop: review activities published.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [
+          "move-steps-facing",
+          "move-steps-order"
+        ],
+        "moveXY": [
+          "move-xy-where",
+          "move-xy-map"
+        ],
+        "moveGlide": [
+          "move-glide-which",
+          "move-glide-speed"
+        ],
+        "looksSay": [
+          "looks-say-bubbles",
+          "looks-say-order"
+        ],
+        "looksCostumes": [
+          "looks-costumes-walk",
+          "looks-costumes-wait"
+        ],
+        "looksBackdrops": [
+          "looks-backdrops-size",
+          "looks-backdrops-match"
+        ],
+        "eventsFlag": [
+          "events-flag-order",
+          "events-flag-missing"
+        ],
+        "eventsKeys": [
+          "events-keys-match",
+          "events-keys-which"
+        ],
+        "eventsClick": [
+          "events-click-when",
+          "events-click-whose"
+        ],
+        "eventsTogether": [
+          "events-together-what",
+          "events-together-wait"
+        ],
+        "loopsRepeat": [
+          "loops-repeat-count",
+          "loops-repeat-inside"
+        ],
+        "loopsForever": [
+          "loops-forever-end",
+          "loops-forever-which"
+        ],
+        "loopsAnimate": [
+          "loops-animate-slow",
+          "loops-animate-heart"
+        ],
+        "loopsPen": [
+          "loops-pen-triangle",
+          "loops-pen-shapes"
+        ],
+        "ifTouching": [
+          "if-touching-when",
+          "if-touching-forever"
+        ],
+        "ifElse": [
+          "if-else-false",
+          "if-else-where"
+        ],
+        "ifKeys": [
+          "if-keys-hold",
+          "if-keys-faster"
+        ],
+        "ifColors": [
+          "if-colors-wall",
+          "if-colors-exact"
+        ],
+        "varsMake": [
+          "vars-make-value",
+          "vars-make-match"
+        ],
+        "varsScore": [
+          "vars-score-move",
+          "vars-score-reset"
+        ],
+        "varsTimer": [
+          "vars-timer-length",
+          "vars-timer-order"
+        ],
+        "varsAsk": [
+          "vars-ask-says",
+          "vars-ask-order"
+        ],
+        "varsRandom": [
+          "vars-random-dice",
+          "vars-random-same"
+        ],
+        "varsCompare": [
+          "vars-compare-true",
+          "vars-compare-clue"
+        ],
+        "soundPlay": [
+          "sound-play-wait",
+          "sound-play-match"
+        ],
+        "soundMusic": [
+          "sound-music-notes",
+          "sound-music-tempo"
+        ],
+        "soundDance": [
+          "sound-dance-two",
+          "sound-dance-slower"
+        ],
+        "storyDialog": [
+          "story-dialog-wait",
+          "story-dialog-same"
+        ],
+        "storyScenes": [
+          "story-scenes-when",
+          "story-scenes-start"
+        ],
+        "storyMessages": [
+          "story-messages-pair",
+          "story-messages-name"
+        ],
+        "storyPlan": [
+          "story-plan-order",
+          "story-plan-tool"
+        ],
+        "gameCatch": [
+          "game-catch-back",
+          "game-catch-faster"
+        ],
+        "gameMaze": [
+          "game-maze-wall",
+          "game-maze-small"
+        ],
+        "gameQuiz": [
+          "game-quiz-score",
+          "game-quiz-equal"
+        ],
+        "gamePong": [
+          "game-pong-paddle",
+          "game-pong-bounce"
+        ],
+        "gameClones": [
+          "game-clones-count",
+          "game-clones-delete"
+        ],
+        "gameMine": [
+          "game-mine-tools",
+          "game-mine-steps"
+        ],
+        "finish": [
+          "finish-blocks",
+          "finish-program",
+          "finish-debug"
+        ]
+      }
     }
   ]
 }

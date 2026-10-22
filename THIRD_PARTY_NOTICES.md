@@ -14,6 +14,15 @@ Every external component is credited here, next to where it is used ("♥ Thanks
 - Source: https://github.com/scratchblocks/scratchblocks
 - Not included on purpose: the translation files (`translations*.js`, `locales/*.json`). They are generated from `scratch-l10n`, which is licensed AGPL-3.0-only since version 5 (scratchblocks 3.7.1 depends on `scratch-l10n ^6.1.86`). To keep this project under MIT, the viewer only uses the English block text built into the core file. A Spanish block-text file written by us is listed as future work in `CONTENT_PLAN.md`.
 
+## Services
+
+### Google Analytics 4
+
+- Used for: counting anonymous page visits, with the same measurement ID as PyBot (Python).
+- Loaded from `https://www.googletagmanager.com/gtag/js` by `startAnalytics()` in `script.js`, only when the page is served over http(s).
+- Ads, ad personalization and Google signals are turned off; the learner's name, answers and progress are never sent.
+- Terms: https://marketingplatform.google.com/about/analytics/terms/us/ · Privacy: https://policies.google.com/privacy
+
 ## Referenced, not included
 
 ### Scratch
