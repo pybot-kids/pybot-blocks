@@ -1551,6 +1551,8 @@ h3 {
 .block {
   position: relative;
   display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
   align-items: center;
   gap: 6px;
   min-height: 44px;

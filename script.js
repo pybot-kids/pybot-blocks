@@ -772,7 +772,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every change that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump "note"`), and add a migration below
 // when an id is renamed or removed.
-const PROGRESS_VERSION = 2;
+const PROGRESS_VERSION = 3;
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
 const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY, LEARNER_NAME_KEY];
@@ -785,12 +785,12 @@ const pathSteps = [
   { id: "helloEditor", activities: ["hello-editor-where", "hello-editor-category", "hello-editor-buttons"] },
   { id: "helloSprites", activities: ["hello-sprites-whose", "hello-sprites-words"] },
   { id: "helloSave", activities: ["hello-save-steps", "hello-save-share"] },
-  { id: "moveSteps", activities: [], soon: true },
-  { id: "moveXY", activities: [], soon: true },
-  { id: "moveGlide", activities: [], soon: true },
-  { id: "looksSay", activities: [], soon: true },
-  { id: "looksCostumes", activities: [], soon: true },
-  { id: "looksBackdrops", activities: [], soon: true },
+  { id: "moveSteps", activities: ["move-steps-facing", "move-steps-order"] },
+  { id: "moveXY", activities: ["move-xy-where", "move-xy-map"] },
+  { id: "moveGlide", activities: ["move-glide-which", "move-glide-speed"] },
+  { id: "looksSay", activities: ["looks-say-bubbles", "looks-say-order"] },
+  { id: "looksCostumes", activities: ["looks-costumes-walk", "looks-costumes-wait"] },
+  { id: "looksBackdrops", activities: ["looks-backdrops-size", "looks-backdrops-match"] },
   { id: "eventsFlag", activities: [], soon: true },
   { id: "eventsKeys", activities: [], soon: true },
   { id: "eventsClick", activities: [], soon: true },
