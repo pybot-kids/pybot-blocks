@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5faf8" />
+    <title>PyBot Blocks</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="extras.js" defer></script>
+  </head>
+  <body data-page="start">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot Blocks</span>
+      </a>
+      <nav class="site-nav" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main" id="main-content">
+      <header class="page-intro">
+        <p class="eyebrow eyebrow-blue" data-i18n="start.eyebrow"></p>
+        <h1 data-i18n="start.title"></h1>
+        <p data-i18n="start.intro"></p>
+      </header>
+      <ol class="start-steps" data-start-steps></ol>
+
+      <section class="page-section" aria-labelledby="viewer-title" data-viewer>
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-blue" data-i18n="viewer.eyebrow"></p>
+          <h2 id="viewer-title" data-i18n="viewer.title"></h2>
+          <p data-i18n="viewer.intro"></p>
+        </div>
+        <div class="viewer-examples" data-viewer-examples></div>
+        <div class="viewer">
+          <label>
+            <span class="visually-hidden" data-i18n="viewer.label"></span>
+            <textarea spellcheck="false" autocapitalize="off" data-viewer-input></textarea>
+          </label>
+          <div class="viewer-output" data-viewer-output aria-live="polite"></div>
+        </div>
+        <p class="viewer-status" role="status" data-viewer-status></p>
+        <p class="viewer-status" data-i18n="viewer.englishNote"></p>
+        <details class="credit-box">
+          <summary data-i18n="viewer.creditSummary"></summary>
+          <p data-i18n="viewer.creditText"></p>
+          <p>
+            <a href="https://github.com/scratchblocks/scratchblocks" target="_blank" rel="noopener noreferrer" data-i18n="viewer.source"></a>
+            · <a href="https://github.com/scratchblocks/scratchblocks/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" data-i18n="viewer.license"></a>
+            · <a href="faq.html#credits" data-i18n="viewer.moreCredits"></a>
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footer.family"></p>
+      <p><span data-i18n="footer.credit"></span> <a href="https://github.com/pybot-kids/pybot-blocks#license" target="_blank" rel="noopener noreferrer" data-i18n="footer.license"></a></p>
+      <p data-i18n="notice.affiliation"></p>
+    </footer>
+  </body>
+</html>

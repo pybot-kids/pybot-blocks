@@ -820,8 +820,9 @@ const pathSteps = [
   { id: "gameMine", activities: [], soon: true },
   { id: "finish", activities: [], soon: true },
 ];
-// Activities outside the path, such as the first mission on the home page.
-const homeActivities = ["first-mission"];
+// Activities outside the path: the first mission on the home page and the
+// "I did it" boxes on the Start in Scratch page.
+const homeActivities = ["first-mission", "start-open", "start-editor", "start-account", "start-save"];
 const stepActivityIds = (step) => step.activities;
 const activityIds = [...homeActivities, ...pathSteps.flatMap(stepActivityIds)];
 

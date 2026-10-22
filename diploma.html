@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5faf8" />
+    <title>PyBot Blocks</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="extras.js" defer></script>
+  </head>
+  <body data-page="diploma">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot Blocks</span>
+      </a>
+      <nav class="site-nav" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main" id="main-content">
+      <header class="page-intro">
+        <p class="eyebrow eyebrow-blue" data-i18n="diploma.eyebrow"></p>
+        <h1 data-i18n="diploma.title"></h1>
+        <p data-i18n="diploma.intro"></p>
+      </header>
+      <label class="diploma-name-field" data-diploma-tools hidden>
+        <span data-i18n="diploma.nameLabel"></span>
+        <input type="text" maxlength="24" autocomplete="off" data-diploma-input data-i18n-placeholder="diploma.namePlaceholder" />
+      </label>
+      <article class="diploma" data-diploma hidden>
+        <span class="diploma-sample-mark" data-diploma-sample data-i18n="diploma.sampleMark" hidden></span>
+        <span class="diploma-brand"><span class="brand-mark" aria-hidden="true"><span></span></span> PyBot Blocks</span>
+        <p class="diploma-kicker" data-i18n="diploma.kicker"></p>
+        <p class="diploma-heading" data-i18n="diploma.heading"></p>
+        <p class="diploma-line" data-i18n="diploma.line"></p>
+        <p class="diploma-name" data-diploma-name></p>
+        <p class="diploma-line" data-i18n="diploma.finished"></p>
+        <p class="diploma-zone"><span aria-hidden="true" data-diploma-sticker></span> <span data-diploma-zone></span></p>
+        <div class="diploma-footer">
+          <p><span data-i18n="diploma.date"></span><b data-diploma-date></b></p>
+          <p><span data-i18n="diploma.signed"></span><b>PyBot 🤖</b></p>
+          <p><span>pybot-kids.github.io/pybot-blocks</span></p>
+        </div>
+      </article>
+      <p class="extras-actions" data-diploma-actions hidden>
+        <button type="button" data-print data-i18n="diploma.print"></button>
+        <a href="album.html" data-i18n="diploma.back"></a>
+      </p>
+      <section class="card" data-diploma-missing hidden>
+        <h2 data-i18n="diploma.missingTitle"></h2>
+        <p></p>
+        <p class="extras-actions"><a class="is-primary" href="course.html" data-i18n="diploma.goMap"></a> <a href="diploma.html?sample=1" data-i18n="album.sample"></a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footer.family"></p>
+      <p><span data-i18n="footer.credit"></span> <a href="https://github.com/pybot-kids/pybot-blocks#license" target="_blank" rel="noopener noreferrer" data-i18n="footer.license"></a></p>
+      <p data-i18n="notice.affiliation"></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5faf8" />
+    <title>PyBot Blocks</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="extras.js" defer></script>
+  </head>
+  <body data-page="album">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot Blocks</span>
+      </a>
+      <nav class="site-nav" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main" id="main-content">
+      <header class="page-intro">
+        <p class="eyebrow eyebrow-blue" data-i18n="album.eyebrow"></p>
+        <h1 data-i18n="album.title"></h1>
+        <p data-i18n="album.intro"></p>
+      </header>
+      <section class="album-streak" aria-live="polite">
+        <span class="album-streak-icon" aria-hidden="true">🔥</span>
+        <p><span data-album-streak></span><small data-album-streak-note></small></p>
+      </section>
+      <h2><span data-i18n="album.stickers"></span> · <span data-sticker-count></span></h2>
+      <ul class="sticker-grid" data-sticker-grid></ul>
+      <p class="extras-actions"><a class="is-primary" href="diploma.html?sample=1" data-i18n="album.sample"></a></p>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footer.family"></p>
+      <p><span data-i18n="footer.credit"></span> <a href="https://github.com/pybot-kids/pybot-blocks#license" target="_blank" rel="noopener noreferrer" data-i18n="footer.license"></a></p>
+      <p data-i18n="notice.affiliation"></p>
+    </footer>
+  </body>
+</html>

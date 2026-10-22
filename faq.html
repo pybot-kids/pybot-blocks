@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5faf8" />
+    <title>PyBot Blocks</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="extras.js" defer></script>
+  </head>
+  <body data-page="faq">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot Blocks</span>
+      </a>
+      <nav class="site-nav" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main" id="main-content">
+      <header class="page-intro">
+        <p class="eyebrow eyebrow-blue" data-i18n="faq.eyebrow"></p>
+        <h1 data-i18n="faq.title"></h1>
+        <p data-i18n="faq.intro"></p>
+      </header>
+      <nav class="faq-jump" data-i18n-aria-label="faq.jumpAria">
+        <a href="#faq-kids" data-i18n="faq.kidsTitle"></a>
+        <a href="#faq-adults" data-i18n="faq.adultsTitle"></a>
+      </nav>
+      <section class="faq-group" id="faq-kids" aria-labelledby="faq-kids-title">
+        <h2 id="faq-kids-title" data-i18n="faq.kidsTitle"></h2>
+        <div class="faq-list" data-faq-list="kids"></div>
+      </section>
+      <section class="faq-group" id="faq-adults" aria-labelledby="faq-adults-title">
+        <h2 id="faq-adults-title" data-i18n="faq.adultsTitle"></h2>
+        <div class="faq-list" data-faq-list="adults"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footer.family"></p>
+      <p><span data-i18n="footer.credit"></span> <a href="https://github.com/pybot-kids/pybot-blocks#license" target="_blank" rel="noopener noreferrer" data-i18n="footer.license"></a></p>
+      <p data-i18n="notice.affiliation"></p>
+    </footer>
+  </body>
+</html>

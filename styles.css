@@ -3214,3 +3214,7 @@ button[hidden] {
     transform: translateY(16px);
   }
 }
+
+.page-main .page-section {
+  width: auto;
+}
