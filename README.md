@@ -1,6 +1,6 @@
 # PyBot Blocks
 
-A free, bilingual (Spanish by default, English) guide that helps children learn to use **Scratch**, step by step and in order, together with their parents.
+A free, bilingual (Spanish by default, English) guide that helps children learn to use **Scratch**, step by step and in order, together with their families.
 
 > Scratch is a project of the Scratch Foundation. PyBot Blocks is an independent guide: it is not affiliated with or endorsed by it.
 
@@ -8,13 +8,13 @@ PyBot Blocks is the third site of the PyBot family, after [PyBot](https://pybot-
 
 ## Product vision
 
-A child opens PyBot Blocks and always knows what to do next: one small idea, a tiny game to check it, and an exact challenge to build in the real Scratch. Parents who don't program can follow along, because every zone has a part for grown-ups.
+A child opens PyBot Blocks and always knows what to do next: one small idea, a tiny game to check it, and an exact challenge to build in the real Scratch. Families who don't program can follow along, because every zone has a part for grown-ups.
 
 PyBot Blocks **promotes Scratch and never replaces it**. All creation happens in the real Scratch (https://scratch.mit.edu or its offline app). We explain, guide, propose challenges and check understanding; then we send the child to Scratch and celebrate what they made there. We never imitate or rebuild the Scratch editor.
 
 ## Motivation
 
-At María Ángel's new school, Scratch is a subject. She learned it in a course, and we want her friends to learn it too without spending much money. Scratch publishes plenty of material, but in practice a child and their parents struggle to know where to start and in what order to continue. PyBot Blocks gives them that route: almost a manual, but very simple, with short steps, small checks and little things to practice.
+At María Ángel's new school, Scratch is a subject. She learned it in a course, and we want her friends to learn it too without spending much money. Scratch publishes plenty of material, but in practice children and their families struggle to know where to start and in what order to continue. PyBot Blocks gives them that route: almost a manual, but very simple, with short steps, small checks and little things to practice.
 
 ## Product principles
 
@@ -28,7 +28,7 @@ At María Ángel's new school, Scratch is a subject. She learned it in a course,
 
 ## Audience and content
 
-- Children from 8 to 10 years old (useful up to about 12), Spanish speakers, and their parents.
+- Children from 8 to 10 years old (useful up to about 12), Spanish speakers, and their families.
 - Spanish is the default language; English is available on every page with EN/ES.
 - The path follows what primary schools usually ask for in Scratch: motion and looks, events, loops, conditionals and sensing, variables, sound, stories, and games.
 - The full plan, zone by zone and page by page, is in [CONTENT_PLAN.md](CONTENT_PLAN.md) (Spanish).
