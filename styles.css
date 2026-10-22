@@ -24,7 +24,12 @@
   --block-events: var(--yellow);
   --block-motion: var(--blue-dark);
   --block-looks: #6b3fa0;
-  --block-control: var(--green-dark);
+  --block-control: #9a5200;
+  --block-sound: #a3266a;
+  --block-sensing: #0a6b87;
+  --block-variables: #b04a00;
+  --block-operators: var(--green-dark);
+  --block-pen: #0d6e55;
   --shadow: 0 22px 60px rgba(18, 48, 74, 0.12);
   --small-shadow: 0 12px 30px rgba(18, 48, 74, 0.09);
   --radius-lg: 32px;
@@ -1587,6 +1592,78 @@ h3 {
   background: var(--block-control);
 }
 
+.block-sound {
+  background: var(--block-sound);
+}
+
+.block-sensing {
+  background: var(--block-sensing);
+}
+
+.block-variables {
+  background: var(--block-variables);
+}
+
+.block-operators {
+  background: var(--block-operators);
+}
+
+.block-pen,
+.block-music {
+  background: var(--block-pen);
+}
+
+.block-text {
+  display: inline-block;
+  padding: 0 8px;
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--ink);
+}
+
+.block-flag {
+  color: #2fdc7a;
+  font-size: 1.15em;
+}
+
+.block-events .block-flag {
+  color: var(--green-dark);
+}
+
+/* A program: blocks stacked from top to bottom. A C block (repeat, if) hugs
+   the blocks inside it. */
+.script {
+  display: grid;
+  justify-items: start;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.script .block {
+  min-height: 40px;
+}
+
+.block-c {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  min-width: 220px;
+  padding-bottom: 14px;
+  border: 2px solid rgba(18, 48, 74, 0.55);
+  border-radius: 8px;
+  background: var(--block-control);
+}
+
+.block-c > .block {
+  border: 0;
+}
+
+.block-c > .script {
+  margin: 4px 0 0 18px;
+}
+
 .block-value {
   display: inline-block;
   min-width: 30px;
@@ -2583,6 +2660,331 @@ a.family-card:hover {
   border-color: var(--green-dark);
 }
 
+/* The path: links to published pages and the learner's place. */
+.in-progress {
+  padding: 12px 16px;
+  border: 2px dashed var(--yellow);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.route-stop a {
+  color: var(--blue-dark);
+  font-weight: 800;
+}
+
+.route-stop.is-current {
+  border-color: var(--blue-dark);
+}
+
+/* Lesson pages */
+.lesson-main {
+  max-width: 900px;
+}
+
+.lesson-back {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-weight: 800;
+}
+
+.lesson-meta {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.lesson-main h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.lesson-goal {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.lesson-part {
+  margin-bottom: 28px;
+  padding: 24px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--small-shadow);
+}
+
+.lesson-part > h2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0 0 14px;
+  font-size: 1.5rem;
+}
+
+.lesson-part-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: none;
+  place-items: center;
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+  background: var(--accent, var(--green));
+  font-size: 1.2rem;
+}
+
+.lesson-look {
+  --accent: var(--green);
+}
+
+.lesson-try {
+  --accent: var(--blue);
+}
+
+.lesson-scratch {
+  --accent: var(--yellow);
+  border-top: 10px solid var(--yellow);
+}
+
+.lesson-part p {
+  margin: 0 0 12px;
+}
+
+.lesson-program {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  margin: 16px 0;
+  padding: 16px;
+  overflow-x: auto;
+  border-radius: 16px;
+  background: var(--bg);
+}
+
+.lesson-program figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.lesson-terms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lesson-terms li {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--bg);
+}
+
+.lesson-terms b {
+  display: block;
+  color: var(--green-dark);
+}
+
+.step-activity {
+  margin-top: 18px;
+  padding: 18px;
+  border: 2px solid var(--line);
+  border-radius: 18px;
+}
+
+.step-activity.is-complete {
+  border-color: var(--green-dark);
+}
+
+.step-activity h3 {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+}
+
+.activity-kind {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--blue-dark);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.activity-options {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.option-button {
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--ink);
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.option-button:hover:not(:disabled) {
+  border-color: var(--blue-dark);
+}
+
+.option-button.is-right {
+  border-color: var(--green-dark);
+  background: var(--green-soft);
+}
+
+.option-button.is-wrong {
+  border-color: #a3262a;
+}
+
+.option-button .block {
+  cursor: inherit;
+}
+
+.match-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+}
+
+.match-columns > div {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.option-button.is-selected {
+  border-color: var(--blue-dark);
+  background: var(--sky);
+}
+
+.activity-feedback {
+  min-height: 1.5em;
+  margin: 6px 0 0;
+  font-weight: 700;
+}
+
+.activity-feedback.is-good {
+  color: var(--green-dark);
+}
+
+.activity-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.order-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.order-area > div {
+  min-height: 120px;
+  padding: 12px;
+  border: 2px dashed var(--line);
+  border-radius: 14px;
+  background: var(--bg);
+}
+
+.order-area h4 {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.order-area .mission-list .block {
+  width: 100%;
+}
+
+.option-button.is-block {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.order-text {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--white);
+  font-weight: 700;
+}
+
+.script .order-text {
+  width: 100%;
+  list-style: decimal inside;
+}
+
+.scratch-steps {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+
+.scratch-steps li {
+  margin-bottom: 8px;
+}
+
+.scratch-box {
+  margin: 12px 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--bg);
+}
+
+.scratch-box b {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.scratch-box ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.selfcheck {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.selfcheck button[aria-pressed="true"] {
+  border-color: var(--green-dark);
+  background: var(--green-soft);
+}
+
+.lesson-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+@media (max-width: 520px) {
+  .order-area,
+  .match-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lesson-part {
+    padding: 18px;
+  }
+}
+
 @media (max-width: 860px) {
   .hero,
   .mission,
@@ -3278,6 +3680,8 @@ button[hidden] {
   .pybot-buddy *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
 
 .reward-toast {
   position: fixed;

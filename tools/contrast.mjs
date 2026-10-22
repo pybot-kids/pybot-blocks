@@ -4,6 +4,7 @@ const tokens = {
   ink: "#12304a", muted: "#4a6075", green: "#2fb36d", "green-dark": "#1a7343", "green-soft": "#e7f7ee",
   blue: "#2d7be0", "blue-dark": "#1b4f9a", sky: "#e5f2ff", yellow: "#ffd23f", "yellow-soft": "#fff6cc",
   bg: "#e8f2f3", white: "#ffffff", python: "#ff7a45", english: "#c2287e",
+  looks: "#6b3fa0", control: "#9a5200", sound: "#a3266a", sensing: "#0a6b87", variables: "#b04a00", pen: "#0d6e55",
 };
 // [text, background, minimum ratio]: 4.5 for body text, 3 for large bold text and icons.
 const pairs = [
@@ -13,6 +14,7 @@ const pairs = [
   ["green-dark", "white", 4.5], ["green-dark", "bg", 4.5], ["green-dark", "green-soft", 4.5],
   ["blue-dark", "white", 4.5], ["blue-dark", "bg", 4.5], ["blue-dark", "sky", 4.5],
   ["ink", "python", 4.5], ["white", "english", 4.5],
+  ["white", "looks", 4.5], ["white", "control", 4.5], ["white", "sound", 4.5], ["white", "sensing", 4.5], ["white", "variables", 4.5], ["white", "pen", 4.5], ["ink", "yellow", 4.5],
 ];
 const luminance = (hex) => {
   const [r, g, b] = hex.match(/\w\w/g).map((part) => parseInt(part, 16) / 255)

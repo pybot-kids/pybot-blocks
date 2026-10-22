@@ -55,6 +55,75 @@
         "gameMine": [],
         "finish": []
       }
+    },
+    {
+      "version": 2,
+      "date": "2026-10-22",
+      "note": "Zone 00 Hola, Scratch: four lessons published with their activities.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [],
+        "moveXY": [],
+        "moveGlide": [],
+        "looksSay": [],
+        "looksCostumes": [],
+        "looksBackdrops": [],
+        "eventsFlag": [],
+        "eventsKeys": [],
+        "eventsClick": [],
+        "eventsTogether": [],
+        "loopsRepeat": [],
+        "loopsForever": [],
+        "loopsAnimate": [],
+        "loopsPen": [],
+        "ifTouching": [],
+        "ifElse": [],
+        "ifKeys": [],
+        "ifColors": [],
+        "varsMake": [],
+        "varsScore": [],
+        "varsTimer": [],
+        "varsAsk": [],
+        "varsRandom": [],
+        "varsCompare": [],
+        "soundPlay": [],
+        "soundMusic": [],
+        "soundDance": [],
+        "storyDialog": [],
+        "storyScenes": [],
+        "storyMessages": [],
+        "storyPlan": [],
+        "gameCatch": [],
+        "gameMaze": [],
+        "gameQuiz": [],
+        "gamePong": [],
+        "gameClones": [],
+        "gameMine": [],
+        "finish": []
+      }
     }
   ]
 }

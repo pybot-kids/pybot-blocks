@@ -156,7 +156,8 @@ const translations = {
     "course.eyebrow": "THE PATH",
     "course.title": "Your way through Scratch",
     "course.intro": "A few big zones, each with its own route of pages. Go in order: each zone uses what the one before taught.",
-    "course.growth": "The pages are on their way. When they arrive, each one ends with a “Make it in Scratch” challenge.",
+    "course.growth": "🚧 Work in progress: we publish the lessons zone by zone. Pages marked “Coming soon” arrive later. Each lesson ends with a “Make it in Scratch” challenge.",
+    "course.here": "You are here",
     "course.zone": "ZONE {count}",
     "course.final": "FINAL STOP",
     "course.adults": "For families",
@@ -443,7 +444,7 @@ const translations = {
     "mission.empty": "Toca un bloque para ponerlo aquí.",
     "mission.blockFlag": "al hacer clic en la bandera verde",
     "mission.blockMove": "mover {value} pasos",
-    "mission.blockSay": "decir {value} por 2 segundos",
+    "mission.blockSay": "decir {value} durante 2 segundos",
     "mission.hello": "¡Hola!",
     "mission.try": "▶ Probar",
     "mission.clear": "Empezar de nuevo",
@@ -526,7 +527,8 @@ const translations = {
     "course.eyebrow": "EL CAMINO",
     "course.title": "Tu ruta por Scratch",
     "course.intro": "Pocas zonas grandes, cada una con su ruta de páginas. Ve en orden: cada zona usa lo que enseñó la anterior.",
-    "course.growth": "Las páginas vienen en camino. Cuando lleguen, cada una terminará con un reto “Hazlo en Scratch”.",
+    "course.growth": "🚧 Proyecto en construcción: publicamos las lecciones zona por zona. Las páginas que dicen “Muy pronto” llegan después. Cada lección termina con un reto “Hazlo en Scratch”.",
+    "course.here": "Estás aquí",
     "course.zone": "ZONA {count}",
     "course.final": "PARADA FINAL",
     "course.adults": "Para familias",
@@ -770,7 +772,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every change that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump "note"`), and add a migration below
 // when an id is renamed or removed.
-const PROGRESS_VERSION = 1;
+const PROGRESS_VERSION = 2;
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
 const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY, LEARNER_NAME_KEY];
@@ -779,10 +781,10 @@ const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY,
 // zone is only added when no zone covers the topic. `soon` pages show "Coming
 // soon" and have no lesson file yet. Lesson files will live in lessons/<id>.html.
 const pathSteps = [
-  { id: "helloWhat", activities: [], soon: true },
-  { id: "helloEditor", activities: [], soon: true },
-  { id: "helloSprites", activities: [], soon: true },
-  { id: "helloSave", activities: [], soon: true },
+  { id: "helloWhat", activities: ["hello-what-build", "hello-what-words"] },
+  { id: "helloEditor", activities: ["hello-editor-where", "hello-editor-category", "hello-editor-buttons"] },
+  { id: "helloSprites", activities: ["hello-sprites-whose", "hello-sprites-words"] },
+  { id: "helloSave", activities: ["hello-save-steps", "hello-save-share"] },
   { id: "moveSteps", activities: [], soon: true },
   { id: "moveXY", activities: [], soon: true },
   { id: "moveGlide", activities: [], soon: true },
@@ -949,7 +951,6 @@ function zoneProgress() {
   return { done: new Set(pathZones.filter((zone) => zone.steps.every((id) => done.has(id)))) };
 }
 
-const stepActivities = document.querySelectorAll(".step-activity");
 
 // Stickers and learning days, from PyBot.
 const zoneBadgeId = (zone) => `zone-${zone.steps[0]}`;
@@ -1666,6 +1667,7 @@ function buddyReact(event) {
   buddyWake(false);
 
   if (event === "correct") {
+    const stepActivities = document.querySelectorAll(".step-activity");
     const pageDone = stepActivities.length > 0 && [...stepActivities].every((item) => item.classList.contains("is-complete"));
     if (pageDone) {
       buddyAct("celebrating", "dance", learnerName ? textWithName("buddy.pageDoneNamed") : textFor("buddy.pageDone"), 4200);
@@ -2311,6 +2313,12 @@ function renderCourse() {
   }
   const done = new Set(doneSteps().map((step) => step.id));
   const doneZones = zoneProgress().done;
+  let current = "";
+  try {
+    current = localStorage.getItem(PATH_CURRENT_KEY) ?? "";
+  } catch {
+    // Without storage no page is marked.
+  }
   let number = 0;
   list.replaceChildren(...pathZones.map((zone) => {
     const card = document.createElement("li");
@@ -2336,7 +2344,21 @@ function renderCourse() {
       stop.className = `route-stop${done.has(id) ? " is-done" : ""}`;
       stop.innerHTML = '<span class="route-dot" aria-hidden="true"></span><span></span>';
       stop.querySelector(".route-dot").textContent = done.has(id) ? "✓" : String(index + 1);
-      stop.querySelector("span:last-child").textContent = textFor(`step.${id}`);
+      const name = stop.querySelector("span:last-child");
+      name.textContent = textFor(`step.${id}`);
+      if (!step.soon) {
+        const link = document.createElement("a");
+        link.href = `lessons/${id}.html`;
+        link.textContent = name.textContent;
+        name.replaceChildren(link);
+      }
+      if (id === current) {
+        stop.classList.add("is-current");
+        const here = document.createElement("span");
+        here.className = "chip";
+        here.textContent = textFor("course.here");
+        stop.append(here);
+      }
       if (step.soon) {
         const chip = document.createElement("span");
         chip.className = "chip chip-soon";
