@@ -1524,20 +1524,22 @@ h3 {
 
 .step-number {
   position: absolute;
-  top: 14px;
-  right: 16px;
-  color: var(--muted);
+  top: 16px;
+  right: 18px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-ink);
   font-weight: 900;
 }
 
 .step-icon {
-  display: grid;
-  width: 56px;
-  height: 56px;
-  place-items: center;
-  border: 3px solid var(--ink);
-  border-radius: 16px;
-  font-size: 1.6rem;
+  font-size: 2.2rem;
+  line-height: 1;
 }
 
 /* Blocks drawn with HTML and CSS. A hat block has a rounded top. */
@@ -1794,11 +1796,7 @@ h3 {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: 24px;
-  padding: 32px;
-  border: 2px solid var(--line);
-  box-shadow: var(--small-shadow);
-  border-radius: var(--radius-lg);
-  background: var(--white);
+  align-items: start;
 }
 
 .local-icon {
@@ -1808,12 +1806,50 @@ h3 {
   place-items: center;
   border: 3px solid var(--ink);
   border-radius: 20px;
-  background: var(--yellow-soft);
+  background: var(--yellow);
   font-size: 2rem;
+}
+
+.local-first > div:last-child {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--ink);
+  color: var(--white);
+}
+
+.local-first .eyebrow {
+  color: var(--yellow);
 }
 
 .local-first h2 {
   margin: 0 0 8px;
+}
+
+.local-first .local-text,
+.local-first .backup-version,
+.local-first .reset-tools summary {
+  color: #d6e4ee;
+}
+
+.local-first .backup-tools {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.local-first .backup-actions button,
+.local-first .reset-tools button {
+  border-color: var(--white);
+  background: transparent;
+  color: var(--white);
+}
+
+.local-first .backup-actions [data-backup-export] {
+  border-color: var(--yellow);
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.local-first .inline-ask {
+  color: var(--ink);
 }
 
 .local-text {
@@ -1898,6 +1934,7 @@ a.family-card:hover {
 
 .family-icon {
   display: grid;
+  border: 2px solid var(--ink);
   grid-row: span 3;
   width: 40px;
   height: 40px;
@@ -2473,12 +2510,18 @@ a.family-card:hover {
 .zone-card,
 .start-step,
 .mission-board,
-.local-first,
 .learner-name-card {
   --accent: var(--green);
   --accent-ink: var(--ink);
-  border-top: 10px solid var(--accent);
   background: var(--white);
+}
+
+.step-card,
+.unplugged-card,
+.extras-card,
+.mission-board,
+.learner-name-card {
+  border-top: 10px solid var(--accent);
 }
 
 .step-grid > li:nth-child(3n + 2),
@@ -2502,10 +2545,8 @@ a.family-card:hover {
   --accent-ink: var(--ink);
 }
 
-.step-icon,
 .unplugged-icon,
 .extras-icon,
-.local-icon,
 .zone-badge,
 .start-step-icon {
   border: 3px solid var(--ink);
@@ -2563,6 +2604,9 @@ a.family-card:hover {
 
   .local-first {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .local-first > div:last-child {
     padding: 22px;
   }
 
