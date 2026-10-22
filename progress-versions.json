@@ -1177,6 +1177,190 @@
         ],
         "finish": []
       }
+    },
+    {
+      "version": 11,
+      "date": "2026-10-22",
+      "note": "Final stop: review activities published.",
+      "steps": {
+        "_home": [
+          "first-mission",
+          "start-open",
+          "start-editor",
+          "start-account",
+          "start-save"
+        ],
+        "helloWhat": [
+          "hello-what-build",
+          "hello-what-words"
+        ],
+        "helloEditor": [
+          "hello-editor-where",
+          "hello-editor-category",
+          "hello-editor-buttons"
+        ],
+        "helloSprites": [
+          "hello-sprites-whose",
+          "hello-sprites-words"
+        ],
+        "helloSave": [
+          "hello-save-steps",
+          "hello-save-share"
+        ],
+        "moveSteps": [
+          "move-steps-facing",
+          "move-steps-order"
+        ],
+        "moveXY": [
+          "move-xy-where",
+          "move-xy-map"
+        ],
+        "moveGlide": [
+          "move-glide-which",
+          "move-glide-speed"
+        ],
+        "looksSay": [
+          "looks-say-bubbles",
+          "looks-say-order"
+        ],
+        "looksCostumes": [
+          "looks-costumes-walk",
+          "looks-costumes-wait"
+        ],
+        "looksBackdrops": [
+          "looks-backdrops-size",
+          "looks-backdrops-match"
+        ],
+        "eventsFlag": [
+          "events-flag-order",
+          "events-flag-missing"
+        ],
+        "eventsKeys": [
+          "events-keys-match",
+          "events-keys-which"
+        ],
+        "eventsClick": [
+          "events-click-when",
+          "events-click-whose"
+        ],
+        "eventsTogether": [
+          "events-together-what",
+          "events-together-wait"
+        ],
+        "loopsRepeat": [
+          "loops-repeat-count",
+          "loops-repeat-inside"
+        ],
+        "loopsForever": [
+          "loops-forever-end",
+          "loops-forever-which"
+        ],
+        "loopsAnimate": [
+          "loops-animate-slow",
+          "loops-animate-heart"
+        ],
+        "loopsPen": [
+          "loops-pen-triangle",
+          "loops-pen-shapes"
+        ],
+        "ifTouching": [
+          "if-touching-when",
+          "if-touching-forever"
+        ],
+        "ifElse": [
+          "if-else-false",
+          "if-else-where"
+        ],
+        "ifKeys": [
+          "if-keys-hold",
+          "if-keys-faster"
+        ],
+        "ifColors": [
+          "if-colors-wall",
+          "if-colors-exact"
+        ],
+        "varsMake": [
+          "vars-make-value",
+          "vars-make-match"
+        ],
+        "varsScore": [
+          "vars-score-move",
+          "vars-score-reset"
+        ],
+        "varsTimer": [
+          "vars-timer-length",
+          "vars-timer-order"
+        ],
+        "varsAsk": [
+          "vars-ask-says",
+          "vars-ask-order"
+        ],
+        "varsRandom": [
+          "vars-random-dice",
+          "vars-random-same"
+        ],
+        "varsCompare": [
+          "vars-compare-true",
+          "vars-compare-clue"
+        ],
+        "soundPlay": [
+          "sound-play-wait",
+          "sound-play-match"
+        ],
+        "soundMusic": [
+          "sound-music-notes",
+          "sound-music-tempo"
+        ],
+        "soundDance": [
+          "sound-dance-two",
+          "sound-dance-slower"
+        ],
+        "storyDialog": [
+          "story-dialog-wait",
+          "story-dialog-same"
+        ],
+        "storyScenes": [
+          "story-scenes-when",
+          "story-scenes-start"
+        ],
+        "storyMessages": [
+          "story-messages-pair",
+          "story-messages-name"
+        ],
+        "storyPlan": [
+          "story-plan-order",
+          "story-plan-tool"
+        ],
+        "gameCatch": [
+          "game-catch-back",
+          "game-catch-faster"
+        ],
+        "gameMaze": [
+          "game-maze-wall",
+          "game-maze-small"
+        ],
+        "gameQuiz": [
+          "game-quiz-score",
+          "game-quiz-equal"
+        ],
+        "gamePong": [
+          "game-pong-paddle",
+          "game-pong-bounce"
+        ],
+        "gameClones": [
+          "game-clones-count",
+          "game-clones-delete"
+        ],
+        "gameMine": [
+          "game-mine-tools",
+          "game-mine-steps"
+        ],
+        "finish": [
+          "finish-blocks",
+          "finish-program",
+          "finish-debug"
+        ]
+      }
     }
   ]
 }

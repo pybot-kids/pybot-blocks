@@ -156,7 +156,7 @@ const translations = {
     "course.eyebrow": "THE PATH",
     "course.title": "Your way through Scratch",
     "course.intro": "A few big zones, each with its own route of pages. Go in order: each zone uses what the one before taught.",
-    "course.growth": "🚧 Work in progress: we publish the lessons zone by zone. Pages marked “Coming soon” arrive later. Each lesson ends with a “Make it in Scratch” challenge.",
+    "course.growth": "🚧 Work in progress: all the lessons are here, and we keep testing and improving them with kids and families. If something in Scratch doesn't work the way a page says, please tell us. Each lesson ends with a “Make it in Scratch” challenge.",
     "course.here": "You are here",
     "course.zone": "ZONE {count}",
     "course.final": "FINAL STOP",
@@ -527,7 +527,7 @@ const translations = {
     "course.eyebrow": "EL CAMINO",
     "course.title": "Tu ruta por Scratch",
     "course.intro": "Pocas zonas grandes, cada una con su ruta de páginas. Ve en orden: cada zona usa lo que enseñó la anterior.",
-    "course.growth": "🚧 Proyecto en construcción: publicamos las lecciones zona por zona. Las páginas que dicen “Muy pronto” llegan después. Cada lección termina con un reto “Hazlo en Scratch”.",
+    "course.growth": "🚧 Proyecto en construcción: ya están todas las lecciones, y las seguimos probando y mejorando con niñas, niños y familias. Si algo en Scratch no funciona como dice una página, cuéntanos. Cada lección termina con un reto “Hazlo en Scratch”.",
     "course.here": "Estás aquí",
     "course.zone": "ZONA {count}",
     "course.final": "PARADA FINAL",
@@ -772,7 +772,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every change that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump "note"`), and add a migration below
 // when an id is renamed or removed.
-const PROGRESS_VERSION = 10;
+const PROGRESS_VERSION = 11;
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
 const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY, LEARNER_NAME_KEY];
@@ -822,7 +822,7 @@ const pathSteps = [
   { id: "gamePong", activities: ["game-pong-paddle", "game-pong-bounce"] },
   { id: "gameClones", activities: ["game-clones-count", "game-clones-delete"] },
   { id: "gameMine", activities: ["game-mine-tools", "game-mine-steps"] },
-  { id: "finish", activities: [], soon: true },
+  { id: "finish", activities: ["finish-blocks", "finish-program", "finish-debug"] },
 ];
 // Activities outside the path: the first mission on the home page and the
 // "I did it" boxes on the Start in Scratch page.
