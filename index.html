@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" data-i18n-content="meta.homeDescription" />
+    <meta name="theme-color" content="#f5faf8" />
+    <title>PyBot Blocks</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot Blocks</span>
+      </a>
+      <nav class="site-nav" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero page-section" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><span aria-hidden="true">🧩</span> <b data-i18n="hero.eyebrow"></b></p>
+          <h1>
+            <span data-i18n="hero.titleStart"></span>
+            <span class="title-accent" data-i18n="hero.titleEnd"></span>
+          </h1>
+          <p class="hero-intro" data-i18n="hero.intro"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="course.html" data-i18n="hero.start"></a>
+            <a class="button button-secondary" href="start.html"><span data-i18n="hero.firstSteps"></span> <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="trust-list" data-i18n-aria-label="a11y.features">
+            <li><span aria-hidden="true">✓</span><b data-i18n="trust.free"></b></li>
+            <li><span aria-hidden="true">✓</span><b data-i18n="trust.accounts"></b></li>
+            <li><span aria-hidden="true">✓</span><b data-i18n="trust.progress"></b></li>
+          </ul>
+          <p class="not-affiliated" data-i18n="notice.affiliation"></p>
+        </div>
+
+        <div class="hero-stage">
+          <div class="speech-bubble" id="pybot-message" aria-live="polite">
+            <span class="speech-kicker" data-i18n="pybot.says"></span>
+            <p></p>
+          </div>
+          <div class="pybot-wrap" data-mood="happy"><div class="pybot"></div></div>
+
+          <div class="learner-name-card">
+            <form class="learner-name-form" data-name-form novalidate>
+              <label for="learner-name" data-i18n="name.question"></label>
+              <div class="learner-name-entry">
+                <input id="learner-name" type="text" maxlength="24" autocomplete="nickname" data-i18n-placeholder="name.placeholder" aria-describedby="learner-name-note learner-name-error" />
+                <button type="submit" data-i18n="name.save"></button>
+              </div>
+              <p id="learner-name-note" class="learner-name-note" data-i18n="name.privateNote"></p>
+              <p id="learner-name-error" class="learner-name-error" data-i18n="name.error" aria-live="polite" hidden></p>
+              <button class="learner-name-forget" type="button" data-name-forget data-i18n="name.forget" hidden></button>
+            </form>
+            <div class="learner-name-saved" data-name-saved hidden>
+              <p><span data-i18n="name.savedPrefix"></span> <strong data-learner-name></strong>.</p>
+              <button type="button" data-name-edit data-i18n="name.change"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" aria-labelledby="loop-title">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-blue" data-i18n="loop.eyebrow"></p>
+          <h2 id="loop-title" data-i18n="loop.title"></h2>
+          <p data-i18n="loop.intro"></p>
+        </div>
+        <ol class="step-grid">
+          <li class="step-card step-green">
+            <span class="step-number">1</span>
+            <div class="step-icon" aria-hidden="true">👀</div>
+            <h3 data-i18n="loop.step1Title"></h3>
+            <p data-i18n="loop.step1Text"></p>
+          </li>
+          <li class="step-card step-blue">
+            <span class="step-number">2</span>
+            <div class="step-icon" aria-hidden="true">🧩</div>
+            <h3 data-i18n="loop.step2Title"></h3>
+            <p data-i18n="loop.step2Text"></p>
+          </li>
+          <li class="step-card step-yellow">
+            <span class="step-number">3</span>
+            <div class="step-icon" aria-hidden="true">✨</div>
+            <h3 data-i18n="loop.step3Title"></h3>
+            <p data-i18n="loop.step3Text"></p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="page-section mission" data-mission aria-labelledby="mission-title">
+        <div class="mission-copy">
+          <p class="eyebrow eyebrow-blue" data-i18n="mission.eyebrow"></p>
+          <h2 id="mission-title" data-i18n="mission.title"></h2>
+          <p data-i18n="mission.text"></p>
+          <p data-i18n="mission.hint"></p>
+        </div>
+        <div class="mission-board">
+          <div class="mission-columns">
+            <div class="mission-area">
+              <h3 data-i18n="mission.blocks"></h3>
+              <ul class="mission-list" data-mission-tray></ul>
+            </div>
+            <div class="mission-area mission-program">
+              <h3 data-i18n="mission.program"></h3>
+              <p class="mission-empty" data-mission-empty data-i18n="mission.empty"></p>
+              <ol class="mission-list" data-mission-program></ol>
+            </div>
+          </div>
+          <div class="mission-stage" data-i18n-aria-label="mission.stage" role="img">
+            <div class="mission-actor"><div class="pybot-wrap" data-mood="happy"></div></div>
+          </div>
+          <p class="mission-feedback" role="status" aria-live="polite" data-mission-feedback></p>
+          <div class="mission-actions">
+            <button class="is-primary" type="button" data-mission-try data-i18n="mission.try"></button>
+            <button type="button" data-mission-clear data-i18n="mission.clear"></button>
+            <a class="button button-secondary" href="start.html" data-mission-next data-i18n="mission.next" hidden></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" aria-labelledby="unplugged-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="unplugged.eyebrow"></p>
+          <h2 id="unplugged-title" data-i18n="unplugged.title"></h2>
+          <p data-i18n="unplugged.intro"></p>
+        </div>
+        <ul class="unplugged-grid">
+          <li class="unplugged-card">
+            <span class="unplugged-icon" aria-hidden="true">🤖</span>
+            <h3 data-i18n="unplugged.robotTitle"></h3>
+            <p data-i18n="unplugged.robotText"></p>
+            <span class="unplugged-who" data-i18n="unplugged.who"></span>
+          </li>
+          <li class="unplugged-card">
+            <span class="unplugged-icon" aria-hidden="true">💃</span>
+            <h3 data-i18n="unplugged.loopTitle"></h3>
+            <p data-i18n="unplugged.loopText"></p>
+            <span class="unplugged-who" data-i18n="unplugged.who"></span>
+          </li>
+          <li class="unplugged-card">
+            <span class="unplugged-icon" aria-hidden="true">👏</span>
+            <h3 data-i18n="unplugged.ifTitle"></h3>
+            <p data-i18n="unplugged.ifText"></p>
+            <span class="unplugged-who" data-i18n="unplugged.who"></span>
+          </li>
+          <li class="unplugged-card">
+            <span class="unplugged-icon" aria-hidden="true">🫘</span>
+            <h3 data-i18n="unplugged.scoreTitle"></h3>
+            <p data-i18n="unplugged.scoreText"></p>
+            <span class="unplugged-who" data-i18n="unplugged.who"></span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="page-section" aria-labelledby="extras-title">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-blue" data-i18n="extras.eyebrow"></p>
+          <h2 id="extras-title" data-i18n="extras.title"></h2>
+          <p class="streak-note" data-streak hidden></p>
+        </div>
+        <ul class="extras-grid">
+          <li>
+            <a class="extras-card" href="album.html">
+              <span class="extras-icon" aria-hidden="true">★</span>
+              <b data-i18n="extras.album"></b>
+              <span data-i18n="extras.albumText"></span>
+            </a>
+          </li>
+          <li>
+            <a class="extras-card" href="start.html">
+              <span class="extras-icon" aria-hidden="true">🚀</span>
+              <b data-i18n="extras.start"></b>
+              <span data-i18n="extras.startText"></span>
+            </a>
+          </li>
+          <li>
+            <a class="extras-card" href="faq.html">
+              <span class="extras-icon" aria-hidden="true">?</span>
+              <b data-i18n="extras.faq"></b>
+              <span data-i18n="extras.faqText"></span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="page-section">
+        <div class="local-first" id="your-progress">
+          <div class="local-icon" aria-hidden="true">🔒</div>
+          <div>
+            <p class="eyebrow" data-i18n="local.eyebrow"></p>
+            <h2 data-i18n="local.title"></h2>
+            <p class="local-text" data-i18n="local.text"></p>
+            <div class="backup-tools">
+              <strong data-i18n="backup.title"></strong>
+              <p data-i18n="backup.text"></p>
+              <div class="backup-actions">
+                <button type="button" data-backup-export data-i18n="backup.export"></button>
+                <button type="button" data-backup-import data-i18n="backup.import"></button>
+                <input type="file" accept=".json,application/json" data-backup-file hidden />
+              </div>
+              <p class="backup-status" role="status" aria-live="polite" data-backup-status></p>
+              <p class="backup-version"><span data-i18n="backup.versionLabel"></span> <span data-progress-version>1</span></p>
+            </div>
+            <details class="reset-tools">
+              <summary data-i18n="reset.title"></summary>
+              <p data-i18n="reset.text"></p>
+              <button type="button" data-progress-reset data-i18n="reset.button"></button>
+              <p class="backup-status" role="status" aria-live="polite" data-reset-status></p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section family" aria-labelledby="family-title">
+        <p class="eyebrow eyebrow-blue" data-i18n="family.eyebrow"></p>
+        <h2 class="family-title" id="family-title" data-i18n="family.title"></h2>
+        <ul class="family-grid" data-family></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top" data-i18n-aria-label="a11y.backTop">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot Blocks</span>
+      </a>
+      <p data-i18n="footer.line"></p>
+      <p data-i18n="footer.family"></p>
+      <p>
+        <span data-i18n="footer.credit"></span>
+        <a href="https://github.com/pybot-kids/pybot-blocks#license" target="_blank" rel="noopener noreferrer" data-i18n="footer.license"></a>
+      </p>
+      <p data-i18n="notice.affiliation"></p>
+    </footer>
+  </body>
+</html>
