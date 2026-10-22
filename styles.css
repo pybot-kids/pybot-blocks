@@ -10,7 +10,7 @@
   --sky: #e5f2ff;
   --yellow: #ffd23f;
   --yellow-soft: #fff6cc;
-  --bg: #f5faf8;
+  --bg: #e8f2f3;
   --white: #ffffff;
   --line: #d6e4ea;
   /* PyBot: head and arms green, body blue, hands, ears, neck and antenna light yellow. */
@@ -1240,7 +1240,7 @@ h3 {
   gap: 8px;
   min-height: 52px;
   padding: 12px 24px;
-  border: 3px solid var(--ink);
+  border: 2px solid var(--green-dark);
   border-radius: 16px;
   font-weight: 900;
   text-decoration: none;
@@ -1250,12 +1250,12 @@ h3 {
 .button-primary {
   background: var(--green-dark);
   color: var(--white);
-  box-shadow: 0 5px 0 var(--ink);
+  box-shadow: 0 4px 0 #0f4d2b;
 }
 
 .button-secondary {
   background: var(--white);
-  color: var(--ink);
+  color: var(--green-dark);
 }
 
 .button:active {
@@ -1387,7 +1387,7 @@ h3 {
   position: relative;
   max-width: 340px;
   padding: 12px 18px;
-  border: 3px solid var(--ink);
+  border: 2px solid var(--line);
   border-radius: 20px;
   background: var(--white);
   box-shadow: var(--small-shadow);
@@ -1399,8 +1399,8 @@ h3 {
   left: 50%;
   width: 22px;
   height: 22px;
-  border-right: 3px solid var(--ink);
-  border-bottom: 3px solid var(--ink);
+  border-right: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
   background: var(--white);
   transform: translateX(-50%) rotate(45deg);
   content: "";
@@ -1449,7 +1449,7 @@ h3 {
 
 .learner-name-card button {
   padding: 10px 14px;
-  border: 2px solid var(--ink);
+  border: 2px solid var(--green-dark);
   border-radius: 12px;
   background: var(--green-dark);
   color: var(--white);
@@ -1460,7 +1460,7 @@ h3 {
 .learner-name-card .learner-name-forget,
 .learner-name-saved button {
   background: var(--white);
-  color: var(--ink);
+  color: var(--green-dark);
 }
 
 .learner-name-note,
@@ -1506,7 +1506,8 @@ h3 {
 .step-card {
   position: relative;
   padding: 24px;
-  border: 3px solid var(--ink);
+  border: 2px solid var(--line);
+  box-shadow: var(--small-shadow);
   border-radius: var(--radius-md);
   background: var(--white);
 }
@@ -1537,18 +1538,6 @@ h3 {
   border: 3px solid var(--ink);
   border-radius: 16px;
   font-size: 1.6rem;
-}
-
-.step-green .step-icon {
-  background: var(--green-soft);
-}
-
-.step-blue .step-icon {
-  background: var(--sky);
-}
-
-.step-yellow .step-icon {
-  background: var(--yellow-soft);
 }
 
 /* Blocks drawn with HTML and CSS. A hat block has a rounded top. */
@@ -1622,10 +1611,10 @@ h3 {
   display: grid;
   gap: 16px;
   padding: 20px;
-  border: 3px solid var(--ink);
+  border: 2px solid var(--line);
+  box-shadow: var(--small-shadow);
   border-radius: var(--radius-lg);
   background: var(--white);
-  box-shadow: var(--shadow);
 }
 
 .mission-columns {
@@ -1681,7 +1670,7 @@ h3 {
   position: relative;
   height: 120px;
   overflow: hidden;
-  border: 2px solid var(--ink);
+  border: 2px solid var(--line);
   border-radius: 16px;
   background: linear-gradient(var(--sky) 70%, var(--green-soft) 70%);
 }
@@ -1717,10 +1706,10 @@ h3 {
 .tool-button {
   min-height: 46px;
   padding: 8px 18px;
-  border: 3px solid var(--ink);
+  border: 2px solid var(--green-dark);
   border-radius: 14px;
   background: var(--white);
-  color: var(--ink);
+  color: var(--green-dark);
   font-weight: 900;
   cursor: pointer;
 }
@@ -1781,7 +1770,8 @@ h3 {
   gap: 4px;
   height: 100%;
   padding: 20px;
-  border: 3px solid var(--ink);
+  border: 2px solid var(--line);
+  box-shadow: var(--small-shadow);
   border-radius: var(--radius-md);
   background: var(--white);
   color: var(--ink);
@@ -1805,7 +1795,8 @@ h3 {
   grid-template-columns: auto minmax(0, 1fr);
   gap: 24px;
   padding: 32px;
-  border: 3px solid var(--ink);
+  border: 2px solid var(--line);
+  box-shadow: var(--small-shadow);
   border-radius: var(--radius-lg);
   background: var(--white);
 }
@@ -1850,10 +1841,10 @@ h3 {
 .reset-tools button {
   min-height: 44px;
   padding: 8px 16px;
-  border: 2px solid var(--ink);
+  border: 2px solid var(--green-dark);
   border-radius: 12px;
   background: var(--white);
-  color: var(--ink);
+  color: var(--green-dark);
   font-weight: 800;
   cursor: pointer;
 }
@@ -2007,7 +1998,8 @@ a.family-card:hover {
   grid-template-columns: auto minmax(0, 1fr);
   gap: 6px 20px;
   padding: 22px;
-  border: 3px solid var(--ink);
+  border: 2px solid var(--line);
+  box-shadow: var(--small-shadow);
   border-radius: var(--radius-lg);
   background: var(--white);
 }
@@ -2022,14 +2014,6 @@ a.family-card:hover {
   border-radius: 20px;
   background: var(--green-soft);
   font-size: 2rem;
-}
-
-.zone-card:nth-child(even) .zone-badge {
-  background: var(--sky);
-}
-
-.zone-final .zone-badge {
-  background: var(--yellow-soft);
 }
 
 .zone-number {
@@ -2163,7 +2147,7 @@ a.family-card:hover {
 }
 
 .sticker.is-earned {
-  border: 3px solid var(--ink);
+  border: 2px solid var(--green-dark);
   background: var(--green-soft);
 }
 
@@ -2188,7 +2172,7 @@ a.family-card:hover {
 .extras-actions button {
   min-height: 48px;
   padding: 10px 20px;
-  border: 3px solid var(--ink);
+  border: 2px solid var(--green-dark);
   border-radius: 14px;
   background: var(--green-dark);
   color: var(--white);
@@ -2302,10 +2286,10 @@ a.family-card:hover {
 
 .faq-jump a {
   padding: 8px 16px;
-  border: 2px solid var(--ink);
+  border: 2px solid var(--green-dark);
   border-radius: 999px;
   background: var(--white);
-  color: var(--ink);
+  color: var(--green-dark);
   font-weight: 800;
   text-decoration: none;
 }
@@ -2366,7 +2350,8 @@ a.family-card:hover {
   grid-template-columns: auto minmax(0, 1fr);
   gap: 4px 16px;
   padding: 20px;
-  border: 3px solid var(--ink);
+  border: 2px solid var(--line);
+  box-shadow: var(--small-shadow);
   border-radius: var(--radius-md);
   background: var(--white);
 }
@@ -2453,7 +2438,7 @@ a.family-card:hover {
   width: 100%;
   min-height: 220px;
   padding: 12px;
-  border: 2px solid var(--ink);
+  border: 2px solid var(--line);
   border-radius: 14px;
   font-family: ui-monospace, Menlo, Consolas, monospace;
   font-size: 0.95rem;
@@ -2478,6 +2463,69 @@ a.family-card:hover {
 .viewer-status {
   color: var(--muted);
   font-weight: 700;
+}
+
+/* Cards, as in the rest of the PyBot family: white, a colored strip on top and a
+   solid icon of the same color. Lists take turns: green, blue, yellow. */
+.step-card,
+.unplugged-card,
+.extras-card,
+.zone-card,
+.start-step,
+.mission-board,
+.local-first,
+.learner-name-card {
+  --accent: var(--green);
+  --accent-ink: var(--ink);
+  border-top: 10px solid var(--accent);
+  background: var(--white);
+}
+
+.step-grid > li:nth-child(3n + 2),
+.unplugged-grid > li:nth-child(3n + 2),
+.extras-grid > li:nth-child(3n + 2) .extras-card,
+.zone-list > li:nth-child(3n + 2),
+.start-steps > li:nth-child(3n + 2),
+.mission-board {
+  --accent: var(--blue);
+  --accent-ink: var(--white);
+}
+
+.step-grid > li:nth-child(3n),
+.unplugged-grid > li:nth-child(3n),
+.extras-grid > li:nth-child(3n) .extras-card,
+.zone-list > li:nth-child(3n),
+.start-steps > li:nth-child(3n),
+.zone-list > li.zone-final,
+.learner-name-card {
+  --accent: var(--yellow);
+  --accent-ink: var(--ink);
+}
+
+.step-icon,
+.unplugged-icon,
+.extras-icon,
+.local-icon,
+.zone-badge,
+.start-step-icon {
+  border: 3px solid var(--ink);
+  background: var(--accent, var(--green));
+  color: var(--accent-ink, var(--ink));
+}
+
+.unplugged-icon,
+.extras-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 14px;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.start-step.is-done {
+  border-color: var(--green-dark);
 }
 
 @media (max-width: 860px) {
