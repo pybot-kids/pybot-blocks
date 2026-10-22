@@ -75,12 +75,16 @@ lessonData.moveXY = {
   look: L([
     "El escenario es como un mapa con dos números. x dice qué tan a la derecha o a la izquierda está algo; y dice qué tan arriba o abajo.",
     "El centro es x: 0, y: 0. Hacia la derecha x llega hasta 240 y hacia la izquierda hasta -240. Hacia arriba y llega hasta 180 y hacia abajo hasta -180.",
+    "Fíjate en el signo: si x es negativa, el objeto está a la izquierda del centro; si y es negativa, está abajo. En el mapa, toca cualquier punto para ver su x y su y.",
     "Debajo del escenario, en la información del objeto, ves su x y su y en todo momento.",
   ], [
     "The stage is like a map with two numbers. x says how far right or left something is; y says how far up or down.",
     "The center is x: 0, y: 0. To the right x goes up to 240 and to the left down to -240. Up, y goes to 180 and down to -180.",
+    "Watch the sign: if x is negative, the sprite is left of the center; if y is negative, it is below. On the map, tap any spot to see its x and y.",
     "Below the stage, in the sprite info, you always see its x and y.",
   ]),
+  // Example points drawn on the stage map, as [x, y].
+  plane: { points: [[100, 50], [-150, 120], [-120, -80], [160, -110]] },
   program: L(["motion:ir a x: (0) y: (0)", "motion:sumar a x (100)", "motion:sumar a y (50)"], ["motion:go to x: (0) y: (0)", "motion:change x by (100)", "motion:change y by (50)"]),
   caption: L("Va al centro, luego 100 a la derecha y 50 hacia arriba: termina en x: 100, y: 50.", "It goes to the center, then 100 right and 50 up: it ends at x: 100, y: 50."),
   activities: [
