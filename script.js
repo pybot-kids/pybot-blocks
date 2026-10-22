@@ -772,7 +772,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every change that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump "note"`), and add a migration below
 // when an id is renamed or removed.
-const PROGRESS_VERSION = 5;
+const PROGRESS_VERSION = 6;
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
 const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY, LEARNER_NAME_KEY];
@@ -799,10 +799,10 @@ const pathSteps = [
   { id: "loopsForever", activities: ["loops-forever-end", "loops-forever-which"] },
   { id: "loopsAnimate", activities: ["loops-animate-slow", "loops-animate-heart"] },
   { id: "loopsPen", activities: ["loops-pen-triangle", "loops-pen-shapes"] },
-  { id: "ifTouching", activities: [], soon: true },
-  { id: "ifElse", activities: [], soon: true },
-  { id: "ifKeys", activities: [], soon: true },
-  { id: "ifColors", activities: [], soon: true },
+  { id: "ifTouching", activities: ["if-touching-when", "if-touching-forever"] },
+  { id: "ifElse", activities: ["if-else-false", "if-else-where"] },
+  { id: "ifKeys", activities: ["if-keys-hold", "if-keys-faster"] },
+  { id: "ifColors", activities: ["if-colors-wall", "if-colors-exact"] },
   { id: "varsMake", activities: [], soon: true },
   { id: "varsScore", activities: [], soon: true },
   { id: "varsTimer", activities: [], soon: true },

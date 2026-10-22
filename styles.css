@@ -1673,6 +1673,35 @@ h3 {
   margin: 4px 0 0 18px;
 }
 
+.block-c-label {
+  padding: 6px 16px 2px;
+  color: var(--white);
+  font-weight: 800;
+}
+
+/* Blocks inside blocks: round reporters and six-sided conditions. */
+.block .block {
+  min-height: 30px;
+  padding: 2px 10px;
+  border-color: rgba(18, 48, 74, 0.35);
+  font-size: 0.95em;
+}
+
+.block .block::after {
+  display: none;
+}
+
+.block-reporter {
+  border-radius: 999px;
+}
+
+.block-bool {
+  padding-inline: 16px;
+  border: 0;
+  border-radius: 0;
+  clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0 50%);
+}
+
 .block-value {
   display: inline-block;
   min-width: 30px;

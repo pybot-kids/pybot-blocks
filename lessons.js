@@ -100,23 +100,70 @@ function el(tag, className, text) {
   return element;
 }
 
+// Splits block text into plain words and slots, keeping nested slots whole:
+// (10) number, [Hi] text, {cat:answer} round reporter, ⟨cat:touching edge?⟩ condition.
+function blockParts(text) {
+  const closers = { "(": ")", "[": "]", "{": "}", "⟨": "⟩" };
+  const parts = [];
+  let plain = "";
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
+    if (!closers[char]) {
+      plain += char;
+      continue;
+    }
+    const stack = [];
+    let end = index;
+    for (; end < text.length; end += 1) {
+      if (closers[text[end]]) {
+        stack.push(closers[text[end]]);
+      } else if (text[end] === stack.at(-1)) {
+        stack.pop();
+        if (!stack.length) {
+          break;
+        }
+      }
+    }
+    if (plain) {
+      parts.push(plain);
+      plain = "";
+    }
+    parts.push(text.slice(index, end + 1));
+    index = end;
+  }
+  if (plain) {
+    parts.push(plain);
+  }
+  return parts;
+}
+
 // One block from "category:text".
-function drawBlock(source) {
+function drawBlock(source, shape = "") {
   const split = source.indexOf(":");
   const kind = source.slice(0, split);
   const text = source.slice(split + 1).trim();
-  const block = el("div", `block block-${kind}`);
-  text.split(/(\([^)]*\)|\[[^\]]*\]|⚑)/).filter(Boolean).forEach((part) => {
-    if (part === "⚑") {
-      const flag = el("span", "block-flag", "⚑");
-      flag.setAttribute("aria-label", currentLanguage === "es" ? "bandera verde" : "green flag");
-      block.append(flag);
+  const block = el("div", `block block-${kind}${shape}`);
+  blockParts(text).forEach((part) => {
+    const inner = part.slice(1, -1);
+    if (part.startsWith("{")) {
+      block.append(drawBlock(inner, " block-reporter"));
+    } else if (part.startsWith("⟨")) {
+      block.append(drawBlock(inner, " block-bool"));
     } else if (part.startsWith("(")) {
-      block.append(el("span", "block-value", part.slice(1, -1)));
+      block.append(el("span", "block-value", inner));
     } else if (part.startsWith("[")) {
-      block.append(el("span", "block-text", part.slice(1, -1)));
+      block.append(el("span", "block-text", inner));
     } else {
-      block.append(part.trim() ? part : " ");
+      part.split("⚑").forEach((words, index) => {
+        if (index > 0) {
+          const flag = el("span", "block-flag", "⚑");
+          flag.setAttribute("aria-label", currentLanguage === "es" ? "bandera verde" : "green flag");
+          block.append(flag);
+        }
+        if (words) {
+          block.append(words.trim() ? words : " ");
+        }
+      });
     }
   });
   return block;
@@ -141,6 +188,12 @@ function drawProgram(lines) {
     const parent = stack.at(-1);
     if (line === "}") {
       stack.pop();
+    } else if (line.startsWith("} ") && line.endsWith(" {")) {
+      // The middle of an if-else block: "} si no {".
+      const holder = stack.pop().parentElement;
+      const inner = el("div", "script");
+      holder.append(el("div", "block-c-label", line.slice(2, -2)), inner);
+      stack.push(inner);
     } else if (line.endsWith(" {")) {
       const holder = el("div", "block-c");
       const header = drawBlock(line.slice(0, -2));
