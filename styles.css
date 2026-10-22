@@ -1670,7 +1670,7 @@ h3 {
 
 .mission-stage {
   position: relative;
-  height: 120px;
+  height: 140px;
   overflow: hidden;
   border: 2px solid var(--line);
   border-radius: 16px;
@@ -1683,7 +1683,7 @@ h3 {
   left: 12px;
   width: 64px;
   height: 74px;
-  transition: transform 1.6s steps(8);
+  transition: transform 0.2s ease-out;
 }
 
 .mission-actor .pybot-wrap {
@@ -1694,8 +1694,22 @@ h3 {
   transform-origin: top left;
 }
 
-.mission-stage.is-walking .mission-actor {
-  transform: translateX(calc(min(420px, 60vw) - 90px));
+.mission-actor.is-moved {
+  transform: translateX(min(300px, 45vw));
+}
+
+/* Like Scratch's speech bubble: above the sprite, it moves with it. */
+.mission-say {
+  position: absolute;
+  bottom: 64px;
+  left: 44px;
+  margin: 0;
+  padding: 4px 12px;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  font-weight: 800;
+  white-space: nowrap;
 }
 
 .mission-actions {

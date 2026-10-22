@@ -65,7 +65,7 @@ const translations = {
     "loop.step3Text": "Exact steps and a short challenge to build in the real Scratch.",
 
     "mission.eyebrow": "YOUR FIRST MISSION",
-    "mission.title": "Make PyBot walk.",
+    "mission.title": "Make PyBot move and say hello.",
     "mission.text": "Tap the blocks in the right order to build the program. Then press Try it.",
     "mission.hint": "Clue: every program starts with something that happens.",
     "mission.blocks": "Blocks",
@@ -73,12 +73,13 @@ const translations = {
     "mission.empty": "Tap a block to put it here.",
     "mission.blockFlag": "when the green flag is clicked",
     "mission.blockMove": "move {value} steps",
-    "mission.blockCostume": "next costume",
+    "mission.blockSay": "say {value} for 2 seconds",
+    "mission.hello": "Hello!",
     "mission.try": "▶ Try it",
     "mission.clear": "Start again",
     "mission.needAll": "Use all three blocks first.",
-    "mission.needEvent": "Almost! Which block tells the program when to start? It goes on top.",
-    "mission.good": "Yes! The event goes first, then PyBot moves and changes costume. Look at it walk!",
+    "mission.needEvent": "Nothing happened! A program needs a block that says when to start, and it goes on top.",
+    "mission.good": "Yes! The green flag starts the program. Then PyBot does each block in order, from top to bottom.",
     "mission.again": "You already did this mission. Want to try again?",
     "mission.next": "Next: try it in Scratch",
     "mission.stage": "Stage",
@@ -434,7 +435,7 @@ const translations = {
     "loop.step3Text": "Pasos exactos y un reto corto para construir en el Scratch de verdad.",
 
     "mission.eyebrow": "TU PRIMERA MISIÓN",
-    "mission.title": "Haz que PyBot camine.",
+    "mission.title": "Haz que PyBot avance y salude.",
     "mission.text": "Toca los bloques en el orden correcto para armar el programa. Después presiona Probar.",
     "mission.hint": "Pista: todo programa empieza con algo que pasa.",
     "mission.blocks": "Bloques",
@@ -442,12 +443,13 @@ const translations = {
     "mission.empty": "Toca un bloque para ponerlo aquí.",
     "mission.blockFlag": "al hacer clic en la bandera verde",
     "mission.blockMove": "mover {value} pasos",
-    "mission.blockCostume": "siguiente disfraz",
+    "mission.blockSay": "decir {value} por 2 segundos",
+    "mission.hello": "¡Hola!",
     "mission.try": "▶ Probar",
     "mission.clear": "Empezar de nuevo",
     "mission.needAll": "Primero usa los tres bloques.",
-    "mission.needEvent": "¡Casi! ¿Qué bloque le dice al programa cuándo empezar? Va arriba.",
-    "mission.good": "¡Sí! El evento va primero; luego PyBot se mueve y cambia de disfraz. ¡Míralo caminar!",
+    "mission.needEvent": "¡No pasó nada! Un programa necesita un bloque que diga cuándo empezar, y va arriba.",
+    "mission.good": "¡Sí! La bandera verde empieza el programa. Luego PyBot hace cada bloque en orden, de arriba abajo.",
     "mission.again": "Ya hiciste esta misión. ¿Quieres intentarlo otra vez?",
     "mission.next": "Ahora pruébalo en Scratch",
     "mission.stage": "Escenario",
@@ -2356,20 +2358,22 @@ function renderCourse() {
   }));
 }
 
-// Home: first mission. Order three blocks so PyBot walks. Only the idea is
-// checked (the event goes on top); there is nothing to grade.
+// Home: first mission. Order three blocks so PyBot moves and says hello. Every
+// block has a visible effect, as in Scratch: without the event on top nothing
+// runs; then the blocks run in order (moving is a quick jump, saying waits 2 s).
 const mission = document.querySelector("[data-mission]");
 const missionBlocks = {
   flag: { kind: "events", key: "mission.blockFlag" },
-  move: { kind: "motion", key: "mission.blockMove", value: "10" },
-  costume: { kind: "looks", key: "mission.blockCostume" },
+  move: { kind: "motion", key: "mission.blockMove", value: "150" },
+  say: { kind: "looks", key: "mission.blockSay", valueKey: "mission.hello" },
 };
 let missionProgram = [];
 let missionFeedbackKey = "";
 
 function missionBlock(id, tag) {
   const block = document.createElement(tag);
-  const { kind, key, value } = missionBlocks[id];
+  const { kind, key, valueKey } = missionBlocks[id];
+  const value = valueKey ? textFor(valueKey) : missionBlocks[id].value;
   block.className = `block block-${kind}`;
   const parts = textFor(key).split("{value}");
   block.append(parts[0]);
@@ -2389,14 +2393,14 @@ function renderMission() {
   const tray = mission.querySelector("[data-mission-tray]");
   const program = mission.querySelector("[data-mission-program]");
   // A fixed shuffled order, so the answer is never already in place.
-  tray.replaceChildren(...["move", "costume", "flag"].filter((id) => !missionProgram.includes(id)).map((id) => {
+  tray.replaceChildren(...["move", "say", "flag"].filter((id) => !missionProgram.includes(id)).map((id) => {
     const item = document.createElement("li");
     const button = missionBlock(id, "button");
     button.type = "button";
     button.addEventListener("click", () => {
       missionProgram.push(id);
       missionFeedbackKey = "";
-      mission.querySelector(".mission-stage").classList.remove("is-walking");
+      resetMissionStage();
       renderMission();
       mission.querySelector("[data-mission-tray] button, [data-mission-try]")?.focus();
     });
@@ -2415,9 +2419,47 @@ function renderMission() {
   mission.querySelector("[data-mission-next]").hidden = missionFeedbackKey !== "mission.good";
 }
 
+let missionRun = 0;
+
+function resetMissionStage() {
+  missionRun += 1;
+  const actor = mission.querySelector(".mission-actor");
+  actor.classList.remove("is-moved");
+  actor.querySelector(".mission-say").hidden = true;
+  actor.querySelector(".pybot-wrap").dataset.mood = "happy";
+}
+
+// Runs the blocks under the event one by one, like Scratch does.
+function runMissionProgram() {
+  const run = missionRun;
+  const actor = mission.querySelector(".mission-actor");
+  const bubble = actor.querySelector(".mission-say");
+  const steps = missionProgram.slice(1);
+  const next = (index) => {
+    if (run !== missionRun) {
+      return;
+    }
+    if (index >= steps.length) {
+      actor.querySelector(".pybot-wrap").dataset.mood = "celebrating";
+      return;
+    }
+    if (steps[index] === "move") {
+      actor.classList.add("is-moved");
+      window.setTimeout(() => next(index + 1), 600);
+    } else {
+      bubble.textContent = textFor("mission.hello");
+      bubble.hidden = false;
+      window.setTimeout(() => {
+        bubble.hidden = true;
+        next(index + 1);
+      }, 2000);
+    }
+  };
+  window.setTimeout(() => next(0), 300);
+}
+
 function tryMission() {
-  const stage = mission.querySelector(".mission-stage");
-  stage.classList.remove("is-walking");
+  resetMissionStage();
   if (missionProgram.length < 3) {
     missionFeedbackKey = "mission.needAll";
   } else if (missionProgram[0] !== "flag") {
@@ -2425,9 +2467,7 @@ function tryMission() {
     buddyReact("wrong");
   } else {
     missionFeedbackKey = "mission.good";
-    void stage.offsetWidth;
-    stage.classList.add("is-walking");
-    mission.querySelector(".mission-actor .pybot-wrap").dataset.mood = "celebrating";
+    runMissionProgram();
     try {
       localStorage.setItem(activityStorageKey("first-mission"), "complete");
     } catch {
@@ -2447,8 +2487,7 @@ if (mission) {
   mission.querySelector("[data-mission-clear]").addEventListener("click", () => {
     missionProgram = [];
     missionFeedbackKey = "";
-    mission.querySelector(".mission-stage").classList.remove("is-walking");
-    mission.querySelector(".mission-actor .pybot-wrap").dataset.mood = "happy";
+    resetMissionStage();
     renderMission();
   });
   if (storedActivityState("first-mission") === "complete") {

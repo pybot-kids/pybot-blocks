@@ -54,7 +54,9 @@ En el sitio no se nombra el curso ni la empresa; si hace falta, se dice "en un c
 8. **El adulto acompaña, no enseña.** Cada zona tiene una nota para adultos: qué se aprende, cómo acompañar sin saber programar y qué preguntar.
 9. **Sesiones cortas.** Una página debe poder hacerse en 15 a 20 minutos, contando el reto en Scratch.
 10. **Remezclar está bien.** Copiar una idea para aprender es válido; después se cambia y se hace propia, dando crédito.
-11. **Seguridad y privacidad.** Nada de lo que el niño escribe se guarda, salvo el nombre que elige. Compartir en Scratch solo con permiso de un adulto.
+11. **Ejemplos con lógica.** Cada bloque de un ejemplo produce un efecto que se ve y que tiene sentido para lo que se pide. Si un bloque no cambia nada en el escenario (por ejemplo, "siguiente disfraz" en un objeto sin disfraces que se distingan), no va en el ejemplo. Lo que se muestra aquí debe pasar igual en Scratch: "mover" es un salto, no una caminata suave; un programa sin evento arriba no arranca con la bandera.
+12. **Ningún concepto antes de tiempo.** Palabras propias de Scratch (disfraz, objeto, escenario, clon, mensaje) solo aparecen después de la página que las explica, o con una explicación de una frase en el mismo lugar.
+13. **Seguridad y privacidad.** Nada de lo que el niño escribe se guarda, salvo el nombre que elige. Compartir en Scratch solo con permiso de un adulto.
 
 ---
 
@@ -626,6 +628,8 @@ Al agregar una página de apoyo a la cabecera: una entrada en `headerPages` (má
 - [ ] Partes en orden: Mira → Prueba aquí → Hazlo en Scratch → Sin pantalla → Para adultos → Cierre.
 - [ ] "Hazlo en Scratch" con pasos exactos, reto corto, qué debería pasar, qué revisar y cómo guardar.
 - [ ] Nombres de bloques verificados en el editor de Scratch en español e inglés.
+- [ ] Cada ejemplo tiene lógica: cada bloque produce un efecto visible, coherente con el objetivo y fiel a lo que pasa en Scratch.
+- [ ] No se usa ningún concepto de Scratch que no se haya explicado antes (o en la misma página).
 - [ ] Bloques dibujados con HTML/CSS o scratchblocks; ninguna captura, logo, gato ni personaje de Scratch.
 - [ ] Actividades con ids únicos en `pathSteps`; `soon: true` quitado; `node tools/progress-version.mjs --bump` ejecutado.
 - [ ] Pistas en dos niveles; ningún mensaje que castigue.
