@@ -3766,3 +3766,157 @@ button[hidden] {
 .page-main .page-section {
   width: auto;
 }
+
+.lesson-plane {
+  margin: 16px 0;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--bg);
+}
+
+.lesson-plane svg {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+  cursor: crosshair;
+  touch-action: manipulation;
+  font-family: var(--font);
+}
+
+.plane-stage {
+  fill: var(--white);
+  stroke: var(--ink);
+  stroke-width: 3;
+}
+
+.plane-right-up {
+  fill: var(--green-soft);
+}
+
+.plane-left-up {
+  fill: var(--sky);
+}
+
+.plane-left-down {
+  fill: var(--yellow-soft);
+}
+
+.plane-right-down {
+  fill: #fff1f0;
+}
+
+.plane-grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.plane-grid.is-strong {
+  stroke: #b9cdd6;
+  stroke-width: 1.5;
+}
+
+.plane-axis {
+  stroke-width: 4;
+}
+
+line.plane-axis-x {
+  stroke: var(--blue-dark);
+}
+
+line.plane-axis-y {
+  stroke: var(--green-dark);
+}
+
+path.plane-axis-x,
+text.plane-axis-x {
+  fill: var(--blue-dark);
+}
+
+path.plane-axis-y,
+text.plane-axis-y {
+  fill: var(--green-dark);
+}
+
+.plane-axis-name {
+  font-size: 28px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.plane-tick {
+  fill: var(--ink);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.plane-quadrant-label {
+  fill: var(--ink);
+  font-size: 26px;
+  font-weight: 800;
+  text-anchor: middle;
+}
+
+.plane-guide {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+
+.plane-point {
+  fill: var(--yellow);
+  stroke: var(--ink);
+  stroke-width: 3;
+}
+
+.plane-center {
+  fill: var(--ink);
+}
+
+.plane-tick,
+.plane-point-label {
+  paint-order: stroke;
+  stroke: var(--white);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.plane-point-label {
+  fill: var(--ink);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.plane-marker circle {
+  fill: var(--block-variables);
+  stroke: var(--white);
+  stroke-width: 3;
+}
+
+.plane-readout {
+  margin: 12px 0 0;
+  text-align: center;
+}
+
+.plane-legend .plane-right b,
+.plane-legend .plane-left b {
+  color: var(--blue-dark);
+}
+
+.plane-legend .plane-up b,
+.plane-legend .plane-down b {
+  color: var(--green-dark);
+}
+
+.plane-legend {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.plane-legend li {
+  background: var(--white);
+}
+
+.plane-marker[hidden] {
+  display: none;
+}

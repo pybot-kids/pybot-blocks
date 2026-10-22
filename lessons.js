@@ -29,6 +29,15 @@ Object.assign(translations.en, {
   "lesson.check": "If it doesn't work, check",
   "lesson.save": "Save: File → Save now (with an account) or File → Save to your computer.",
   "lesson.missing": "This page is not ready yet.",
+  "plane.label": "The Scratch stage as a coordinate plane. x goes from -240 on the left to 240 on the right; y goes from -180 at the bottom to 180 at the top. The center is x: 0, y: 0.",
+  "plane.center": "center",
+  "plane.tap": "Tap anywhere on the stage to see its x and y.",
+  "plane.read": "x: {x}, y: {y}",
+  "plane.right": "x is positive (+): right of the center",
+  "plane.left": "x is negative (−): left of the center",
+  "plane.up": "y is positive (+): above the center",
+  "plane.down": "y is negative (−): below the center",
+  "plane.onAxis": "on the line",
   "activity.choice": "CHOOSE",
   "activity.order": "PUT IN ORDER",
   "activity.match": "MATCH",
@@ -68,6 +77,15 @@ Object.assign(translations.es, {
   "lesson.check": "Si no funciona, revisa",
   "lesson.save": "Guarda: Archivo → Guardar ahora (con cuenta) o Archivo → Guardar en tu computadora.",
   "lesson.missing": "Esta página todavía no está lista.",
+  "plane.label": "El escenario de Scratch como plano cartesiano. x va de -240 a la izquierda a 240 a la derecha; y va de -180 abajo a 180 arriba. El centro es x: 0, y: 0.",
+  "plane.center": "centro",
+  "plane.tap": "Toca cualquier lugar del escenario para ver su x y su y.",
+  "plane.read": "x: {x}, y: {y}",
+  "plane.right": "x es positiva (+): a la derecha del centro",
+  "plane.left": "x es negativa (−): a la izquierda del centro",
+  "plane.up": "y es positiva (+): arriba del centro",
+  "plane.down": "y es negativa (−): abajo del centro",
+  "plane.onAxis": "sobre la línea",
   "activity.choice": "ELIGE",
   "activity.order": "ORDENA",
   "activity.match": "EMPAREJA",
@@ -423,6 +441,90 @@ function drawMatch(activity) {
   return card;
 }
 
+// The Scratch stage as a coordinate plane: 480 wide and 360 tall, center 0, 0.
+// SVG y grows downwards, so every Scratch y is drawn at -y.
+const SVG_NS = "http://www.w3.org/2000/svg";
+function svg(tag, attributes, text) {
+  const node = document.createElementNS(SVG_NS, tag);
+  Object.entries(attributes).forEach(([name, value]) => node.setAttribute(name, value));
+  if (text !== undefined) {
+    node.textContent = text;
+  }
+  return node;
+}
+
+function drawPlane(points = []) {
+  const figure = el("figure", "lesson-plane");
+  const plane = svg("svg", { viewBox: "-262 -204 524 408", role: "img", "aria-label": textFor("plane.label") });
+  plane.append(svg("rect", { class: "plane-stage", x: -240, y: -180, width: 480, height: 360 }));
+  [[1, 1], [-1, 1], [-1, -1], [1, -1]].forEach(([sx, sy]) => {
+    plane.append(svg("rect", { class: `plane-quadrant plane-${sx > 0 ? "right" : "left"}-${sy > 0 ? "up" : "down"}`, x: sx > 0 ? 0 : -240, y: sy > 0 ? -180 : 0, width: 240, height: 180 }));
+    const label = svg("text", { class: "plane-quadrant-label", x: sx * 200, y: sy > 0 ? -150 : 135 });
+    label.append(svg("tspan", { x: sx * 200 }, `x ${sx > 0 ? "+" : "−"}`), svg("tspan", { x: sx * 200, dy: "1.15em" }, `y ${sy > 0 ? "+" : "−"}`));
+    plane.append(label);
+  });
+  for (let x = -220; x <= 220; x += 20) {
+    plane.append(svg("line", { class: x % 100 ? "plane-grid" : "plane-grid is-strong", x1: x, y1: -180, x2: x, y2: 180 }));
+  }
+  for (let y = -160; y <= 160; y += 20) {
+    plane.append(svg("line", { class: y % 100 ? "plane-grid" : "plane-grid is-strong", x1: -240, y1: y, x2: 240, y2: y }));
+  }
+  plane.append(
+    svg("line", { class: "plane-axis plane-axis-x", x1: -252, y1: 0, x2: 252, y2: 0 }),
+    svg("line", { class: "plane-axis plane-axis-y", x1: 0, y1: -194, x2: 0, y2: 194 }),
+    svg("path", { class: "plane-arrow plane-axis-x", d: "M258 0 l-12 -7 v14 z M-258 0 l12 -7 v14 z" }),
+    svg("path", { class: "plane-arrow plane-axis-y", d: "M0 -200 l-7 12 h14 z M0 200 l-7 -12 h14 z" }),
+  );
+  [-240, -100, 100, 240].forEach((x) => {
+    plane.append(svg("text", { class: "plane-tick", x: x + (Math.abs(x) === 240 ? -Math.sign(x) * 4 : 0), y: 18, "text-anchor": Math.abs(x) === 240 ? (x > 0 ? "end" : "start") : "middle" }, String(x)));
+  });
+  [-180, -100, 100, 180].forEach((y) => {
+    plane.append(svg("text", { class: "plane-tick", x: -8, y: -y + (Math.abs(y) === 180 ? (y > 0 ? 14 : -5) : 5), "text-anchor": "end" }, String(y)));
+  });
+  plane.append(
+    svg("text", { class: "plane-axis-name plane-axis-x", x: 236, y: -10, "text-anchor": "end" }, "x"),
+    svg("text", { class: "plane-axis-name plane-axis-y", x: 10, y: -164 }, "y"),
+  );
+  points.forEach(([x, y]) => {
+    plane.append(
+      svg("line", { class: "plane-guide", x1: x, y1: -y, x2: x, y2: 0 }),
+      svg("line", { class: "plane-guide", x1: x, y1: -y, x2: 0, y2: -y }),
+      svg("circle", { class: "plane-point", cx: x, cy: -y, r: 8 }),
+      svg("text", { class: "plane-point-label", x: x + (x > 60 ? -12 : 12), y: -y - 12, "text-anchor": x > 60 ? "end" : "start" }, textFor("plane.read").replace("{x}", x).replace("{y}", y)),
+    );
+  });
+  plane.append(
+    svg("circle", { class: "plane-center", cx: 0, cy: 0, r: 7 }),
+    svg("text", { class: "plane-point-label", x: 10, y: 34 }, `0, 0 ${textFor("plane.center")}`),
+  );
+  const marker = svg("g", { class: "plane-marker", hidden: "" });
+  const markerDot = svg("circle", { r: 9 });
+  marker.append(markerDot);
+  plane.append(marker);
+
+  const readout = el("p", "plane-readout", textFor("plane.tap"));
+  readout.setAttribute("aria-live", "polite");
+  plane.addEventListener("pointerdown", (event) => {
+    const spot = new DOMPoint(event.clientX, event.clientY).matrixTransform(plane.getScreenCTM().inverse());
+    const x = Math.max(-240, Math.min(240, Math.round(spot.x / 10) * 10));
+    const y = Math.max(-180, Math.min(180, Math.round(-spot.y / 10) * 10));
+    markerDot.setAttribute("cx", x);
+    markerDot.setAttribute("cy", -y);
+    marker.removeAttribute("hidden");
+    const side = (value, plus, minus) => (value > 0 ? textFor(plus) : value < 0 ? textFor(minus) : textFor("plane.onAxis"));
+    readout.replaceChildren(el("b", "", textFor("plane.read").replace("{x}", x).replace("{y}", y)), ` — ${side(x, "plane.right", "plane.left")}; ${side(y, "plane.up", "plane.down")}`);
+  });
+
+  const legend = el("ul", "lesson-terms plane-legend");
+  [["plane-right", "x +", "plane.right"], ["plane-left", "x −", "plane.left"], ["plane-up", "y +", "plane.up"], ["plane-down", "y −", "plane.down"]].forEach(([className, sign, key]) => {
+    const item = el("li", className);
+    item.append(el("b", "", sign), textFor(key));
+    legend.append(item);
+  });
+  figure.append(plane, readout, legend);
+  return figure;
+}
+
 const activityDrawers = { choice: drawChoice, order: drawOrder, match: drawMatch };
 
 function part(className, icon, titleKey) {
@@ -468,6 +570,9 @@ function renderLesson() {
 
   const look = part("lesson-look", "👀", "lesson.look");
   paragraphs(look, lesson.look);
+  if (lesson.plane) {
+    look.append(drawPlane(lesson.plane.points));
+  }
   if (lesson.program) {
     const figure = el("figure", "lesson-program");
     figure.append(drawProgram(pick(lesson.program)));
