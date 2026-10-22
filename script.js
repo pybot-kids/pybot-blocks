@@ -772,7 +772,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every change that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump "note"`), and add a migration below
 // when an id is renamed or removed.
-const PROGRESS_VERSION = 9;
+const PROGRESS_VERSION = 10;
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
 const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY, LEARNER_NAME_KEY];
@@ -816,12 +816,12 @@ const pathSteps = [
   { id: "storyScenes", activities: ["story-scenes-when", "story-scenes-start"] },
   { id: "storyMessages", activities: ["story-messages-pair", "story-messages-name"] },
   { id: "storyPlan", activities: ["story-plan-order", "story-plan-tool"] },
-  { id: "gameCatch", activities: [], soon: true },
-  { id: "gameMaze", activities: [], soon: true },
-  { id: "gameQuiz", activities: [], soon: true },
-  { id: "gamePong", activities: [], soon: true },
-  { id: "gameClones", activities: [], soon: true },
-  { id: "gameMine", activities: [], soon: true },
+  { id: "gameCatch", activities: ["game-catch-back", "game-catch-faster"] },
+  { id: "gameMaze", activities: ["game-maze-wall", "game-maze-small"] },
+  { id: "gameQuiz", activities: ["game-quiz-score", "game-quiz-equal"] },
+  { id: "gamePong", activities: ["game-pong-paddle", "game-pong-bounce"] },
+  { id: "gameClones", activities: ["game-clones-count", "game-clones-delete"] },
+  { id: "gameMine", activities: ["game-mine-tools", "game-mine-steps"] },
   { id: "finish", activities: [], soon: true },
 ];
 // Activities outside the path: the first mission on the home page and the
