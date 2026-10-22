@@ -772,7 +772,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every change that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump "note"`), and add a migration below
 // when an id is renamed or removed.
-const PROGRESS_VERSION = 8;
+const PROGRESS_VERSION = 9;
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
 const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY, LEARNER_NAME_KEY];
@@ -812,10 +812,10 @@ const pathSteps = [
   { id: "soundPlay", activities: ["sound-play-wait", "sound-play-match"] },
   { id: "soundMusic", activities: ["sound-music-notes", "sound-music-tempo"] },
   { id: "soundDance", activities: ["sound-dance-two", "sound-dance-slower"] },
-  { id: "storyDialog", activities: [], soon: true },
-  { id: "storyScenes", activities: [], soon: true },
-  { id: "storyMessages", activities: [], soon: true },
-  { id: "storyPlan", activities: [], soon: true },
+  { id: "storyDialog", activities: ["story-dialog-wait", "story-dialog-same"] },
+  { id: "storyScenes", activities: ["story-scenes-when", "story-scenes-start"] },
+  { id: "storyMessages", activities: ["story-messages-pair", "story-messages-name"] },
+  { id: "storyPlan", activities: ["story-plan-order", "story-plan-tool"] },
   { id: "gameCatch", activities: [], soon: true },
   { id: "gameMaze", activities: [], soon: true },
   { id: "gameQuiz", activities: [], soon: true },
