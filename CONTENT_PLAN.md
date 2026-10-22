@@ -185,7 +185,7 @@ Meta: mover objetos con pasos, giros y coordenadas; cambiar cómo se ven y hacer
 #### `moveXY` — ¿Dónde está? x e y
 - **Objetivo**: entender el escenario como un plano con x e y.
 - **Conceptos**: coordenadas, centro (0, 0), x a los lados, y arriba-abajo.
-- **Bloques**: `ir a x: () y: ()`, `cambiar x en ()`, `cambiar y en ()`, `fijar x a ()`.
+- **Bloques**: `ir a x: () y: ()`, `sumar a x ()`, `sumar a y ()`, `dar a x el valor ()`.
 - **Actividades**: cuenta los pasos en una cuadrícula; empareja coordenada ↔ lugar del escenario.
 - **Hazlo en Scratch**: enviar el objeto a las 4 esquinas con `ir a x: y:`. Reto: volver siempre al centro al empezar. Si no funciona: revisar signos negativos.
 - **Sin pantalla**: batalla naval en papel.
@@ -194,7 +194,7 @@ Meta: mover objetos con pasos, giros y coordenadas; cambiar cómo se ven y hacer
 #### `moveGlide` — Deslizar e ir a
 - **Objetivo**: mover suavemente y a lugares al azar.
 - **Conceptos**: tiempo, movimiento suave, posición aleatoria.
-- **Bloques**: `deslizar en (1) segs a x: () y: ()`, `deslizar en (1) segs a [posición aleatoria]`, `rebotar si toca un borde`.
+- **Bloques**: `deslizar en (1) segs a x: () y: ()`, `deslizar en (1) segs a [posición aleatoria]`, `si toca un borde, rebotar`.
 - **Actividades**: ¿qué hace este programa?; encuentra el bloque que falta.
 - **Hazlo en Scratch**: un pez que nada a 3 lugares. Reto: cambiar los segundos para que vaya más lento. Si no funciona: revisar segundos (0 es instantáneo).
 - **Sin pantalla**: "cámara lenta": caminar a un punto en 1 o en 5 segundos.
@@ -203,9 +203,9 @@ Meta: mover objetos con pasos, giros y coordenadas; cambiar cómo se ven y hacer
 #### `looksSay` — Decir y pensar
 - **Objetivo**: hacer que un objeto hable o piense.
 - **Conceptos**: globo de diálogo, tiempo, secuencia de frases.
-- **Bloques**: `decir [¡Hola!] por (2) segundos`, `decir [¡Hola!]`, `pensar [Mmm…] por (2) segundos`.
+- **Bloques**: `decir [¡Hola!] durante (2) segundos`, `decir [¡Hola!]`, `pensar [Mmm…] durante (2) segundos`.
 - **Actividades**: empareja bloque ↔ globo (decir/pensar); arregla el programa de PyBot (frases en desorden).
-- **Hazlo en Scratch**: el objeto se presenta en 3 frases. Reto: una frase pensada al final. Si no funciona: revisar que se usó "por () segundos" para que no se tapen.
+- **Hazlo en Scratch**: el objeto se presenta en 3 frases. Reto: una frase pensada al final. Si no funciona: revisar que se usó "durante () segundos" para que no se tapen.
 - **Sin pantalla**: cómic de 3 viñetas con globos de decir y pensar.
 - **Para familias**: es buen momento para inventar su personaje.
 
@@ -221,7 +221,7 @@ Meta: mover objetos con pasos, giros y coordenadas; cambiar cómo se ven y hacer
 #### `looksBackdrops` — Fondos y tamaño
 - **Objetivo**: cambiar fondos, tamaño, mostrar y esconder.
 - **Conceptos**: escenario con varios fondos, tamaño en porcentaje, visibilidad.
-- **Bloques**: `cambiar fondo a []`, `siguiente fondo`, `cambiar tamaño en ()`, `fijar tamaño a () %`, `mostrar`, `esconder`.
+- **Bloques**: `cambiar fondo a []`, `siguiente fondo`, `cambiar tamaño por ()`, `fijar tamaño al () %`, `mostrar`, `esconder`.
 - **Actividades**: ¿qué hace este programa?; verdadero o falso.
 - **Hazlo en Scratch**: un objeto que crece y aparece en un fondo nuevo. Reto: volver al tamaño 100 % al empezar. Si no funciona: revisar el estado inicial del objeto.
 - **Sin pantalla**: escenografía con cajas: cambiar el fondo de la obra.
@@ -243,7 +243,7 @@ Meta: entender que los eventos inician programas.
 #### `eventsKeys` — Teclas que mueven
 - **Objetivo**: mover un objeto con las flechas del teclado.
 - **Conceptos**: causa y efecto, varios eventos para un objeto.
-- **Bloques**: `al presionar tecla [flecha derecha]`, `cambiar x en (10)`, `cambiar y en (10)`.
+- **Bloques**: `al presionar tecla [flecha derecha]`, `sumar a x (10)`, `sumar a y (10)`.
 - **Actividades**: empareja tecla ↔ movimiento; encuentra el bloque que falta.
 - **Hazlo en Scratch**: control con las 4 flechas. Reto: la barra espaciadora hace que diga "¡Hola!". Si no funciona: revisar la tecla elegida en el menú del bloque.
 - **Sin pantalla**: control remoto humano con tarjetas de flechas.
@@ -283,7 +283,7 @@ Meta: usar bucles para no repetir bloques.
 #### `loopsForever` — Por siempre
 - **Objetivo**: usar un bucle que no termina y detenerlo con el alto.
 - **Conceptos**: bucle infinito, botón de alto.
-- **Bloques**: `por siempre`, `rebotar si toca un borde`.
+- **Bloques**: `por siempre`, `si toca un borde, rebotar`.
 - **Actividades**: verdadero o falso; empareja bucle ↔ resultado.
 - **Hazlo en Scratch**: pelota que rebota por siempre. Reto: que también gire mientras rebota. Si no funciona: revisar el estilo de rotación.
 - **Sin pantalla**: canción que nunca termina, hasta que alguien dice "¡alto!".
@@ -292,7 +292,7 @@ Meta: usar bucles para no repetir bloques.
 #### `loopsAnimate` — Animaciones que se repiten
 - **Objetivo**: crear animaciones con bucles y esperas.
 - **Conceptos**: ritmo, velocidad de la animación.
-- **Bloques**: `por siempre` + `siguiente disfraz` + `esperar`, `cambiar efecto [color] en ()`.
+- **Bloques**: `por siempre` + `siguiente disfraz` + `esperar`, `sumar al efecto [color] ()`.
 - **Actividades**: predice antes de ejecutar; encuentra el bloque que falta (la espera).
 - **Hazlo en Scratch**: un letrero que cambia de color y un personaje que camina por siempre. Reto: dos velocidades distintas. Si no funciona: sin `esperar` todo va demasiado rápido.
 - **Sin pantalla**: luces de Navidad con linternas: encender y apagar en ritmo.
@@ -301,7 +301,7 @@ Meta: usar bucles para no repetir bloques.
 #### `loopsPen` — Dibujar figuras con el lápiz
 - **Objetivo**: dibujar figuras con la extensión Lápiz y bucles.
 - **Conceptos**: extensión, lápiz arriba/abajo, ángulos de polígonos (360 ÷ lados).
-- **Bloques**: `borrar todo`, `bajar lápiz`, `subir lápiz`, `fijar color del lápiz a []`, `repetir`, `mover`, `girar`.
+- **Bloques**: `borrar todo`, `bajar lápiz`, `subir lápiz`, `fijar color de lápiz a []`, `repetir`, `mover`, `girar`.
 - **Actividades**: cuenta los pasos (cuántas veces repetir para un cuadrado); empareja figura ↔ programa.
 - **Hazlo en Scratch**: agregar la extensión Lápiz (botón abajo a la izquierda) y dibujar un cuadrado. Reto: triángulo y estrella. Si no funciona: revisar `bajar lápiz` antes de mover.
 - **Sin pantalla**: caminar un cuadrado en el patio contando giros.
@@ -354,7 +354,7 @@ Meta: guardar y usar información con variables y números.
 #### `varsMake` — Crear una variable
 - **Objetivo**: crear una variable y cambiar su valor.
 - **Conceptos**: variable como caja con nombre, valor inicial.
-- **Bloques**: botón "Crear una variable", `dar a [] el valor ()`, `cambiar [] en (1)`, `mostrar variable []`.
+- **Bloques**: botón "Crear una variable", `dar a [] el valor ()`, `sumar a [] (1)`, `mostrar variable []`.
 - **Actividades**: predice el valor final; empareja bloque ↔ valor.
 - **Hazlo en Scratch**: variable "saltos" que suma 1 en cada salto. Reto: que empiece en 0 al presionar la bandera. Si no funciona: revisar el valor inicial.
 - **Sin pantalla**: vaso de frijoles con etiqueta.
@@ -363,7 +363,7 @@ Meta: guardar y usar información con variables y números.
 #### `varsScore` — Contar puntos
 - **Objetivo**: llevar un puntaje en un juego.
 - **Conceptos**: puntaje, sumar al tocar algo.
-- **Bloques**: `cambiar [puntos] en (1)`, `si <¿tocando?> entonces`.
+- **Bloques**: `sumar a [puntos] (1)`, `si <¿tocando?> entonces`.
 - **Actividades**: arregla el programa de PyBot (suma infinita mientras toca); ¿qué hace este programa?
 - **Hazlo en Scratch**: tocar estrellas suma 1 y la estrella se mueve a un lugar al azar. Reto: restar si toca un obstáculo. Si no funciona: mover la estrella después de sumar.
 - **Sin pantalla**: puntos con frijoles en un juego de preguntas.
@@ -421,7 +421,7 @@ Meta: dar vida a los proyectos con sonido y música.
 #### `soundMusic` — Hacer música con notas
 - **Objetivo**: componer una melodía con la extensión Música.
 - **Conceptos**: nota, pulso, tempo, instrumento.
-- **Bloques**: `tocar nota (60) durante (0.25) pulsos`, `tocar tambor [] durante () pulsos`, `fijar instrumento a []`, `fijar tempo a ()`.
+- **Bloques**: `tocar nota (60) durante (0.25) tiempos`, `tocar tambor [] durante () tiempos`, `fijar instrumento a []`, `dar al tempo el valor ()`.
 - **Actividades**: ordenar notas de una melodía conocida; empareja tempo ↔ rápido/lento.
 - **Hazlo en Scratch**: agregar la extensión Música y tocar las primeras notas de una canción infantil. Reto: repetirla con un bucle. Si no funciona: revisar que la extensión esté agregada.
 - **Sin pantalla**: palmas con ritmo largo y corto.
@@ -443,7 +443,7 @@ Meta: crear historias con diálogos, escenas y mensajes.
 #### `storyDialog` — Diálogos
 - **Objetivo**: hacer que dos personajes conversen por turnos.
 - **Conceptos**: turnos, tiempo, sincronizar con esperas.
-- **Bloques**: `decir [] por () segundos`, `esperar () segundos`.
+- **Bloques**: `decir [] durante () segundos`, `esperar () segundos`.
 - **Actividades**: ordenar el diálogo; arregla el programa de PyBot (hablan a la vez).
 - **Hazlo en Scratch**: chiste de dos personajes. Reto: un tercer personaje que responde. Si no funciona: sumar los segundos de cada turno.
 - **Sin pantalla**: leer un diálogo en voz alta por turnos.
@@ -452,7 +452,7 @@ Meta: crear historias con diálogos, escenas y mensajes.
 #### `storyScenes` — Cambiar de escena
 - **Objetivo**: cambiar fondos para mostrar escenas.
 - **Conceptos**: escena, inicio-nudo-desenlace, eventos de fondo.
-- **Bloques**: `cambiar fondo a []`, `al cambiar el fondo a []`.
+- **Bloques**: `cambiar fondo a []`, `cuando el fondo cambie a []`.
 - **Actividades**: ordena escenas de un cuento; ¿qué hace este programa?
 - **Hazlo en Scratch**: historia de 3 escenas. Reto: que un personaje aparezca solo en la escena 2. Si no funciona: revisar `mostrar`/`esconder` al cambiar el fondo.
 - **Sin pantalla**: cuento en 3 dibujos.
@@ -483,7 +483,7 @@ Meta: proyectos guiados que juntan todo. Cada proyecto tiene 3 o 4 "misiones" co
 #### `gameCatch` — Atrapa la fruta
 - **Objetivo**: juego donde cae una fruta y una canasta la atrapa.
 - **Conceptos**: movimiento con teclas, posición aleatoria, puntaje, condición.
-- **Bloques**: `ir a x: (aleatorio) y: (180)`, `cambiar y en (-5)`, `¿tocando?`, variable `puntos`.
+- **Bloques**: `ir a x: (aleatorio) y: (180)`, `sumar a y (-5)`, `¿tocando?`, variable `puntos`.
 - **Actividades**: ordena las misiones del juego; encuentra el bloque que falta.
 - **Hazlo en Scratch**: construir el juego en 4 misiones. Reto: que la fruta caiga más rápido con más puntos. Si no funciona: revisar que la fruta vuelva arriba al tocar el suelo.
 - **Sin pantalla**: atrapar pelotas de papel con una caja.
@@ -510,7 +510,7 @@ Meta: proyectos guiados que juntan todo. Cada proyecto tiene 3 o 4 "misiones" co
 #### `gamePong` — Pelota y paleta
 - **Objetivo**: pelota que rebota y paleta controlada por el ratón.
 - **Conceptos**: dirección, rebote, perder, seguir el ratón.
-- **Bloques**: `fijar x a (posición x del ratón)`, `rebotar si toca un borde`, `apuntar en dirección`, `¿tocando?`.
+- **Bloques**: `dar a x el valor (posición x del ratón)`, `si toca un borde, rebotar`, `apuntar en dirección`, `¿tocando?`.
 - **Actividades**: predice el rebote; encuentra el bloque que falta.
 - **Hazlo en Scratch**: juego de pelota y paleta con una línea roja que termina el juego. Reto: puntaje por rebote. Si no funciona: revisar el ángulo después del rebote (`180 - dirección`).
 - **Sin pantalla**: pelota contra la pared.
@@ -612,6 +612,13 @@ Al agregar una página de apoyo a la cabecera: una entrada en `headerPages` (má
 ---
 
 ## 9. Fases con criterios de "listo"
+
+### Estado actual
+
+- Las fases 1 a 5 están escritas: las 42 páginas del camino tienen contenido (versión de progreso 11). Siguen en **borrador** hasta las pruebas con niñas y niños (sección 10); el camino lo dice con un aviso visible de “Proyecto en construcción”.
+- Los nombres de los bloques se verificaron con el texto del editor de Scratch en español (archivo de idioma de `scratchblocks` 3.7.1, solo leído para comprobar; no se incluye en el sitio).
+- **Por verificar en el editor real**: las opciones de los menús, que ese archivo no trae: “espacio”, “flecha derecha/izquierda/arriba/abajo”, “posición aleatoria”, “puntero del ratón”, “borde”, “mí mismo” y “todos”; los nombres de los botones “Elige un objeto”, “Elige un fondo”, “Elige un sonido” y “Crear una variable”; y los nombres de sonidos de la biblioteca (por ejemplo “Pop”).
+
 
 | Fase | Contenido | Listo cuando… |
 | --- | --- | --- |

@@ -36,7 +36,7 @@ At María Ángel's new school, Scratch is a subject. She learned it in a course,
 ## Plain-language and page model
 
 - Short sentences, one idea per page, and one clear thing to do.
-- Pages: `index.html` (home), `course.html` (the path), `start.html` (Start in Scratch and the block viewer), `album.html`, `diploma.html`, `faq.html`. Lesson pages will live in `lessons/<step id>.html`.
+- Pages: `index.html` (home), `course.html` (the path), `start.html` (Start in Scratch and the block viewer), `album.html`, `diploma.html`, `faq.html`. Lesson pages live in `lessons/<step id>.html`.
 - The home page has: the hero with a tappable PyBot, the "What would you like me to call you?" card, the learning loop, the first mission, games without a screen, "More for you", "Your work is yours", and the PyBot family.
 
 ## PyBot mascot
@@ -83,6 +83,15 @@ The palette is green and blue so it doesn't feel "for girls" or "for boys". Bloc
 - `extras.js` adds the album, diploma, questions and the Start in Scratch page with the viewer. It listens for the `pybot:language` event to redraw.
 - `vendor/scratchblocks.min.js` is loaded only on `start.html`, with an 8-second time limit and a plain-text fallback.
 
+### Lesson pages
+
+- `lessons/<id>.html` are small shells written by `node tools/lesson-pages.mjs`. Each loads `script.js`, `lessons.js` and its zone's content file, `content/<zone>.js`.
+- `lessons.js` draws every lesson from data, always in the same order: Look → Try it here → Make it in Scratch (exact steps, a short challenge, what should happen, what to check) → Without a screen → For families → How did it go? → previous/next.
+- Activities: `choice` (choose, find the missing block, predict, what does this program do), `order` (put blocks or steps in order) and `match`. Each has a stable id listed in `pathSteps`; `tools/lesson-pages.mjs` fails if the ids in `content/` and `pathSteps` differ (also in CI).
+- Content is bilingual: `L(es, en)`. Block names follow the Spanish Scratch editor.
+- Block notation inside programs: `category:text`, where `(10)` is a number, `[Hi]` a text or menu, `{category:answer}` a round reporter, `⟨category:touching [edge]?⟩` a condition, and `⚑` the green flag. A line ending in ` {` opens a C block (repeat, forever, if), `} si no {` is the middle of an if-else, `}` closes it, and `---` starts another program next to it.
+- To publish a new lesson: write it in `content/<zone>.js`, set its activities in `pathSteps` (remove `soon`), run `node tools/lesson-pages.mjs` and `node tools/progress-version.mjs --bump "note"`.
+
 ### Shared header
 
 `arrangeHeader()` builds the header on every page from one list, `headerPages` in `script.js`: links with icon and name on the left (the current page is highlighted), and compact buttons on the right: ♥ (Patreon, `https://www.patreon.com/pybot`, new tab), the buddy PyBot, EN/ES, and the ☰ menu. Below 900 px the links move into the ☰ menu so the header always uses one row. To add a page, add one entry to `headerPages`.
@@ -108,7 +117,7 @@ Every key starts with `pybotblocks.` so it never mixes with the other PyBot site
 | `pybotblocks.activity.<id>` | localStorage | `complete` or `review` |
 | `pybotblocks.progress.version` | localStorage | Progress version the stored data belongs to |
 
-Activity ids today: `first-mission` (home), `start-open`, `start-editor`, `start-account`, `start-save` (Start in Scratch). Path keys are filled by lesson pages once they exist.
+Activity ids outside the path: `first-mission` (home), `start-open`, `start-editor`, `start-account`, `start-save` (Start in Scratch). Lesson activity ids are listed in `pathSteps` and recorded per version in `progress-versions.json`. Lesson pages fill `path.visited`, `path.current`, `path.done` and `selfcheck`.
 
 ### Backup
 
@@ -132,7 +141,7 @@ Loading validates everything: format, schema version, progress version, a 100 KB
 
 - Adding, renaming or removing a step or activity id: run `node tools/progress-version.mjs --bump "what changed"`.
 - Renaming or removing an id: also add an entry to `progressMigrations` (helpers: `renameProgressStep`, `renameProgressActivity`).
-- CI (`.github/workflows/progress-version.yml`) runs `node tools/progress-version.mjs` and `node tools/contrast.mjs`.
+- CI (`.github/workflows/progress-version.yml`) runs `node tools/progress-version.mjs`, `node tools/contrast.mjs` and `node tools/lesson-pages.mjs --check`.
 
 ## Credits
 
@@ -149,7 +158,7 @@ Every external component is credited in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOT
 
 ## Path index
 
-All pages are marked `soon: true` ("Muy pronto") until their lessons exist.
+All 42 pages have lessons (progress version 11). They are a first draft until tested with children; the path shows a visible work-in-progress note.
 
 | Zone | Pages |
 | --- | --- |
@@ -188,9 +197,12 @@ faq.html              Questions for kids and grown-ups
 styles.css            All styles
 script.js             Shared script (translations, path, header, buddy, progress)
 extras.js             Album, diploma, questions, Start in Scratch, viewer
+lessons.js            Lesson engine (Look, Try it here, Make it in Scratch…)
+lessons/              One small page per lesson (written by tools/lesson-pages.mjs)
+content/              Lesson content by zone, in Spanish and English
 favicon.svg           PyBot's head
 vendor/               scratchblocks core and its license
-tools/                progress-version.mjs, contrast.mjs
+tools/                progress-version.mjs, lesson-pages.mjs, contrast.mjs
 progress-versions.json
 CONTENT_PLAN.md       Content plan (Spanish)
 THIRD_PARTY_NOTICES.md
@@ -215,4 +227,4 @@ Then open http://localhost:8000/. Opening `index.html` directly from disk also w
 
 ## Status
 
-Plan stage. The site, its index, the path, the extras and the content plan are ready; **no lessons are written yet**, so every page of the path shows "Muy pronto". Next step: Phase 1 of [CONTENT_PLAN.md](CONTENT_PLAN.md) (zone 00 and the lesson page template).
+Work in progress. The site, the path and every lesson of the nine zones and the final stop are written in Spanish and English. They are a first draft: next comes testing with children and families (see section 10 of [CONTENT_PLAN.md](CONTENT_PLAN.md)) and checking the menu option names listed there in the real Scratch editor.
