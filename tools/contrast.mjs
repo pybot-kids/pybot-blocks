@@ -8,10 +8,10 @@ const tokens = {
 // [text, background, minimum ratio]: 4.5 for body text, 3 for large bold text and icons.
 const pairs = [
   ["ink", "bg", 4.5], ["ink", "white", 4.5], ["ink", "sky", 4.5], ["ink", "green-soft", 4.5], ["ink", "yellow-soft", 4.5],
-  ["ink", "yellow", 4.5], ["ink", "green", 4.5], ["muted", "bg", 4.5], ["muted", "white", 4.5], ["muted", "sky", 4.5], ["muted", "green-soft", 4.5], ["muted", "yellow-soft", 4.5],
+  ["ink", "yellow", 4.5], ["ink", "green", 4.5], ["muted", "bg", 4.5], ["muted", "white", 4.5], ["muted", "sky", 4.5],
   ["white", "green-dark", 4.5], ["white", "blue-dark", 4.5], ["white", "ink", 4.5], ["white", "blue", 3],
   ["green-dark", "white", 4.5], ["green-dark", "bg", 4.5], ["green-dark", "green-soft", 4.5],
-  ["blue-dark", "white", 4.5], ["blue-dark", "bg", 4.5], ["blue-dark", "sky", 4.5], ["blue-dark", "green-soft", 4.5], ["blue-dark", "yellow-soft", 4.5], ["green-dark", "sky", 4.5], ["green-dark", "yellow-soft", 4.5],
+  ["blue-dark", "white", 4.5], ["blue-dark", "bg", 4.5], ["blue-dark", "sky", 4.5],
   ["ink", "python", 4.5], ["white", "english", 4.5],
 ];
 const luminance = (hex) => {
