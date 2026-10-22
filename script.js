@@ -772,7 +772,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every change that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump "note"`), and add a migration below
 // when an id is renamed or removed.
-const PROGRESS_VERSION = 6;
+const PROGRESS_VERSION = 7;
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
 const RESET_KEPT_KEYS = [LANGUAGE_KEY, BUDDY_PREFERENCE_KEY, BUDDY_POSITION_KEY, LEARNER_NAME_KEY];
@@ -803,12 +803,12 @@ const pathSteps = [
   { id: "ifElse", activities: ["if-else-false", "if-else-where"] },
   { id: "ifKeys", activities: ["if-keys-hold", "if-keys-faster"] },
   { id: "ifColors", activities: ["if-colors-wall", "if-colors-exact"] },
-  { id: "varsMake", activities: [], soon: true },
-  { id: "varsScore", activities: [], soon: true },
-  { id: "varsTimer", activities: [], soon: true },
-  { id: "varsAsk", activities: [], soon: true },
-  { id: "varsRandom", activities: [], soon: true },
-  { id: "varsCompare", activities: [], soon: true },
+  { id: "varsMake", activities: ["vars-make-value", "vars-make-match"] },
+  { id: "varsScore", activities: ["vars-score-move", "vars-score-reset"] },
+  { id: "varsTimer", activities: ["vars-timer-length", "vars-timer-order"] },
+  { id: "varsAsk", activities: ["vars-ask-says", "vars-ask-order"] },
+  { id: "varsRandom", activities: ["vars-random-dice", "vars-random-same"] },
+  { id: "varsCompare", activities: ["vars-compare-true", "vars-compare-clue"] },
   { id: "soundPlay", activities: [], soon: true },
   { id: "soundMusic", activities: [], soon: true },
   { id: "soundDance", activities: [], soon: true },
