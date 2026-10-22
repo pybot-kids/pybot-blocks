@@ -1647,6 +1647,13 @@ h3 {
   min-height: 40px;
 }
 
+.programs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 32px;
+  align-items: flex-start;
+}
+
 .block-c {
   position: relative;
   display: grid;

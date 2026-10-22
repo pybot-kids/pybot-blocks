@@ -122,8 +122,19 @@ function drawBlock(source) {
   return block;
 }
 
-// A whole program, with C blocks.
+// A whole program, with C blocks. A line "---" starts another program next to it.
 function drawProgram(lines) {
+  if (lines.includes("---")) {
+    const group = el("div", "programs");
+    let start = 0;
+    lines.forEach((line, index) => {
+      if (line === "---" || index === lines.length - 1) {
+        group.append(drawProgram(lines.slice(start, line === "---" ? index : index + 1)));
+        start = index + 1;
+      }
+    });
+    return group;
+  }
   const root = el("div", "script");
   const stack = [root];
   lines.forEach((line) => {
